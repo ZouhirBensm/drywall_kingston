@@ -28,12 +28,10 @@
 
 
 
-  <title class="category-template">
-    <%= category %>
-  </title>
-  <meta name="title" content="Drywall">
+  <title class="category-template"><%= category %></title>
+  <meta name="title" content="<%= category %>">
   <meta name="description"
-    content="Explore our range of drywall services at Drywall Kingston. Find detailed information on installation, repair, patching, finishing, and texturing to meet your project needs.">
+    content="All <%= category %> related blog articles">
 
   <script>
     console.log('Production:', '<%= locals.production %>');
