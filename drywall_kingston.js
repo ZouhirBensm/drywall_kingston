@@ -516,7 +516,7 @@ app.get('/tiroir1/privacy-policy', (req, res) => {
 
 
 
-app.get('/sitemap/xml-sitemap', async (req, res) => {
+app.get('/sitemap/sitemap-1', async (req, res) => {
   // Define the path to the XML file
   const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 
