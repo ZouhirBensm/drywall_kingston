@@ -85,7 +85,7 @@ div.tm-welcome-left-col a {
 
 /* Placing the map address image under the home page banner 500 by 500 px */
 div.tm-welcome-right {
-  background-image: url('../img/map1_op.webp'); /* Replace with the actual image path */
+  background-image: url('../img/map1_op.avif'); /* Replace with the actual image path */
   background-size: cover; /* Ensures the image covers the entire div */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */

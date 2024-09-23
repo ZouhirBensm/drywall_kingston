@@ -14,7 +14,7 @@ const organizationSchema = {
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "393 Flatrock Rd",
+    "streetAddress": "1786 Bath Rd #18",
     "addressLocality": "Kingston",
     "addressRegion": "ON",
     "postalCode": "K7M 4Y2",

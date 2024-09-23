@@ -8,7 +8,7 @@ const serviceSchema = {
     "description": "We provide top-notch drywall installation and repair services for residential and commercial properties in the Kingston area.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "393 Flatrock Rd",
+      "streetAddress": "1786 Bath Rd #18",
       "addressLocality": "Kingston",
       "addressRegion": "ON",
       "postalCode": "K7M 4Y2",
