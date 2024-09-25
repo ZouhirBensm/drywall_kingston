@@ -1,35 +1,63 @@
-body>footer>div>div#social-media>a[href='#social1']>img:hover {
+/* body>footer>div>div#social-media>a[href='#social1']>img:hover {
   content: url('../img/icons/youtube_red.svg');
-}
+} */
 
-body>footer>div>div#social-media>a[href='#social2']>img:hover {
+body>footer>div>div#social-media>a[href='https://x.com/DrywallKingston']>img:hover {
   content: url('../img/icons/twitter_red.svg');
 }
 
-body>footer>div>div#social-media>a[href='#social3']>img:hover {
+body>footer>div>div#social-media>a[href='https://www.pinterest.com/drywallkingston/']>img:hover {
   content: url('../img/icons/pinterest_red.svg');
 }
 
-body>footer>div>div#social-media>a[href='#social4']>img:hover {
-  content: url('../img/icons/quora_red.svg');
+body>footer>div>div#social-media>a[href='https://www.facebook.com/people/Drywall-Kingston-Earnanswers/61560891117055/']>img:hover {
+  content: url('../img/icons/facebook_red.svg');
 }
 
-/* mailto:admin@earnanswers.com */
-body>footer>div>div#social-media>a[href='#social5']>img:hover {
-  content: url('../img/icons/email_red.svg');
+body>footer>div>div#social-media>a[href='https://www.instagram.com/drywallkingston/']>img:hover {
+  content: url('../img/icons/instagram_red.svg');
 }
 
-body>footer>div>div#social-media>a[href='#social6']>img:hover {
-  content: url('../img/icons/reddit_red.svg');
+body>footer>div>div#social-media>a[href='https://www.linkedin.com/company/drywall-kingston']>img:hover {
+  content: url('../img/icons/linkedin_red.svg');
 }
 
-
-body>footer>div>div#social-media>a[href='#social6']>img:hover {
-  content: url('../img/icons/reddit_red.svg');
-}
 
 body>footer>div>div#social-media>a[href='mailto:drywallkingston@outlook.com']>img:hover {
   content: url('../img/icons/email_red.svg');
+}
+
+
+body>footer>div>div#social-media>a[href='https://x.com/DrywallKingston']>img {
+  height: 44px;
+  width: 44px
+}
+
+body>footer>div>div#social-media>a[href='https://www.pinterest.com/drywallkingston/']>img {
+  height: 44px;
+  width: 44px
+
+}
+
+body>footer>div>div#social-media>a[href='https://www.facebook.com/people/Drywall-Kingston-Earnanswers/61560891117055/']>img {
+  height: 65px;
+  width: 65px
+}
+
+body>footer>div>div#social-media>a[href='https://www.instagram.com/drywallkingston/']>img {
+  height: 44px;
+  width: 44px
+}
+
+body>footer>div>div#social-media>a[href='https://www.linkedin.com/company/drywall-kingston']>img {
+  height: 65px;
+  width: 65px
+}
+
+
+body>footer>div>div#social-media>a[href='mailto:drywallkingston@outlook.com']>img {
+  height: 44px;
+  width: 44px
 }
 
 
@@ -51,6 +79,7 @@ body > footer > div > div#social-media {
   width: fit-content;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 body > footer > div  > div#social-media > a {
