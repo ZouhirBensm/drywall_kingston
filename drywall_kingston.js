@@ -206,6 +206,13 @@ app.get('/about', (req, res) => {
 });
 
 
+app.get('/car', (req, res) => {
+  return res.render('careers-form');
+  // return res.sendFile('about.html', { root: 'public' });
+});
+
+
+
 app.get('/service/drywall-installation', (req, res) => {
   return res.render('drywall-installation');
   // return res.sendFile('drywall-installation.html', { root: 'public' });
