@@ -545,6 +545,9 @@ app.get('/sitemap/sitemap-1', async (req, res) => {
   let last_modified_4 = '2024-06-24T13:13:22.821Z';
   let last_modified_4_date = new Date(last_modified_4);
 
+  let last_modified_5 = '2024-10-07T18:42:50.563Z';
+  let last_modified_5_date = new Date(last_modified_4);
+
   const urls = [
     {
       URL: '/',
@@ -571,10 +574,16 @@ app.get('/sitemap/sitemap-1', async (req, res) => {
       priority: 1
     },
     {
-      URL: '/sitemap',
-      lastmod: last_modified_4_date,
+      URL: '/car',
+      lastmod: last_modified_5_date,
       changefreq: "monthly",
       priority: 1
+    },
+    {
+      URL: '/sitemap',
+      lastmod: last_modified_5,
+      changefreq: "yearly",
+      priority: 0.5
     },
 
     // {
