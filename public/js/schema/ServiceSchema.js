@@ -100,27 +100,27 @@ const serviceSchema = {
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Doug Leo"
+          "name": "Walid Khan"
         },
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
           "bestRating": "5"
         },
-        "reviewBody": "Exceptional drywall service! Efficient, professional, and great results. Highly recommend them for any job."
+        "reviewBody": "Drywall Kingston Earnanswers did an outstanding job on my project. Their team was professional, efficient, and delivered top-quality work. They kept me informed throughout the process and made sure everything was completed on time and within budget. I highly recommend them for anyone looking for reliable and expert drywall services!"
       },
       {
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Alan Schmidts"
+          "name": "Zona G"
         },
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
           "bestRating": "5"
         },
-        "reviewBody": "Great experience with this Kingston drywall company. Prompt, skilled, and the finish was flawless. Very impressed."
+        "reviewBody": "I recently hired this drywall service contractor for a renovation, and I was really impressed with their professionalism and attention to detail. The team was punctual and worked efficiently, making sure the project met high standards. I also appreciated their clear communication throughout the entire process. I would definitely recommend them to anyone looking for drywall services!"
       },
       {
         "@type": "Review",
