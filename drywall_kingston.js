@@ -581,7 +581,7 @@ app.get('/sitemap/sitemap-1', async (req, res) => {
     },
     {
       URL: '/sitemap',
-      lastmod: last_modified_5,
+      lastmod: last_modified_5_date,
       changefreq: "yearly",
       priority: 0.5
     },
