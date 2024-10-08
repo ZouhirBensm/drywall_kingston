@@ -30,8 +30,7 @@
 
   <title>Careers Apply for Drywall Installer/Finisher Position</title>
   <meta name="title" content="Careers">
-  <meta name="description"
-    content="Careers Apply for Drywall Installer/Finisher Position">
+  <meta name="description" content="Careers Apply for Drywall Installer/Finisher Position">
 
   <script>
     console.log('Production:', '<%= locals.production %>');
@@ -49,6 +48,58 @@
       gtag('config', 'G-PVQMQ78LBR');
     </script>
     <% } %>
+
+      <!-- JobPosting Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "Drywall Installer/Finisher",
+      "description": "We are seeking a skilled and experienced Drywall Installer/Finisher to join our team in Kingston, Ontario. The ideal candidate will be responsible for installing drywall panels, taping and finishing seams, applying coats of compound, sanding, and ensuring a smooth, high-quality surface.",
+      "datePosted": "2024-10-07",
+      "validThrough": "2025-12-31T23:59",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Drywall Kingston",
+        "sameAs": "https://drywallkingston.com",
+        "logo": "https://drywallkingston.com/img/logo_head2.png"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1786 Bath Rd #18",
+          "addressLocality": "Kingston",
+          "addressRegion": "ON",
+          "postalCode": "K7M 4Y2",
+          "addressCountry": "CA"
+        }
+      },
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "CAD",
+        "value": {
+          "@type": "QuantitativeValue",
+          "value": 27,
+          "unitText": "HOUR"
+        }
+      },
+      "applicantLocationRequirements": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "directApply": true,
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Drywall Kingston",
+        "value": "DK2024-001"
+      }
+    }
+    </script>
 
 </head>
 
@@ -161,8 +212,10 @@
           <div class="mb-1 mt-1">
             <h2>Drywall Installer/Finisher</h2>
             <p class='mb-0'>
-              We are seeking a skilled and experienced <b>Drywall Installer/Finisher</b> to join our team in <b>Kingston, Ontario</b>.
-              The ideal candidate will be responsible for installing drywall panels, taping and finishing seams, applying
+              We are seeking a skilled and experienced <b>Drywall Installer/Finisher</b> to join our team in
+              <b>Kingston, Ontario</b>.
+              The ideal candidate will be responsible for installing drywall panels, taping and finishing seams,
+              applying
               coats of compound, sanding, and ensuring a smooth, high-quality surface. Candidates must have experience
               with a variety of drywall techniques and tools, including texturing and finishing.
             </p>
@@ -188,8 +241,10 @@
               <li>Valid driver's license and reliable transportation.</li>
             </ul>
             <p class='mb-0'>
-              If you are a motivated individual with experience in drywall installation and finishing, we encourage you to
-              apply. Join us in delivering high-quality results on every project! Application form is <a href="#jobApplicationForm">here</a>!
+              If you are a motivated individual with experience in drywall installation and finishing, we encourage you
+              to
+              apply. Join us in delivering high-quality results on every project! Application form is <a
+                href="#jobApplicationForm">here</a>!
             </p>
 
           </div>
@@ -197,11 +252,11 @@
 
 
           <div class="mb-5 mt-5">
-            
+
             <h2>
               <a href='https://drywallkingston.com/' target='_blank'>Apply for Drywall Installer/Finisher Position</a>
             </h2>
-  
+
             <!-- Drywall Installer/Finisher Job Application Form -->
             <form id="jobApplicationForm" class="tm-bg-white-transparent" enctype="multipart/form-data" method="post">
               <div class="form-group">
@@ -216,7 +271,8 @@
               </div>
               <div class="form-group">
                 <input type="email" id="applicant_email" name="applicant_email"
-                  class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Email" required />
+                  class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Email"
+                  required />
               </div>
               <div class="form-group">
                 <input type="tel" id="applicant_phone" name="applicant_phone"
