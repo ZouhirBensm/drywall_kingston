@@ -87,8 +87,11 @@
             <div class="tm-brand-container text-center">
               <h1 class="tm-brand-name">Sitemap</h1>
               <p class="tm-brand-description">Drywall Kingston 🇨🇦</p>
-              <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
-                Book a call
+              <!-- <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
+                  Book a call
+                </a> -->
+              <a class="animated-text blue mb-0" href="tel:3434771480">
+                +1 (343) 477 1480
               </a>
             </div>
           </div>
@@ -156,7 +159,7 @@
             <h2>Sitemap</h2>
             <h3>HTML Sitemap</h3>
             <ul>
-              <li><a href="/">Drywall Kingston Residential & Commercial Contractor</a></li>
+              <li><a href="/">Drywall Kingston Repair Services</a></li>
               <li><a href="/request-free-quote">Request Free Quote</a></li>
               <li><a href="/organization">Organization</a></li>
               <li><a href="/about">About Us</a></li>
@@ -165,12 +168,15 @@
               <li><a href="/car">Careers Apply for Drywall Installer/Finisher Position</a></li>
               <li>Service
                 <ul>
-                  <li><a href="/service/drywall-installation">Drywall Installation</a></li>
-                  <li><a href="/service/drywall-repair-and-patching">Drywall Repair and Patching</a></li>
-                  <li><a href="/service/drywall-finishing-and-texturing">Drywall Finishing and Texturing</a></li>
+                  <li><a href="/service/drywall-installation-service">Drywall Installation</a></li>
+                  <li><a href="/service/drywall-repair-and-patching-services">Drywall Repair and Patching</a></li>
+                  <li><a href="/service/drywall-finishing-and-texturing-service">Drywall Finishing and Texturing</a>
+                  </li>
                   <% service_pages.forEach(function(page) { %>
-                    <li><a href="/service/<%= page.slug %>"><%= page.title %></a></li>
-                  <% }); %>
+                    <li><a href="/service/<%= page.slug %>">
+                        <%= page.title %>
+                      </a></li>
+                    <% }); %>
                 </ul>
               </li>
 
@@ -178,14 +184,18 @@
 
                 <ul>
                   <% Object.keys(categories_and_associated_blogs).forEach(function(categoryName) { %>
-                    <li><%= categoryName %>
-                      <ul>
-                        <% categories_and_associated_blogs[categoryName].blogs.forEach(function(blog) { %>
-                          <li><a href="/blog/<%= categories_and_associated_blogs[categoryName].categorySlug %>/blog-posting/<%= blog.slug %>"><%= blog.title %></a></li>
-                        <% }); %>
-                      </ul>
+                    <li>
+                      <%= categoryName %>
+                        <ul>
+                          <% categories_and_associated_blogs[categoryName].blogs.forEach(function(blog) { %>
+                            <li><a
+                                href="/blog/<%= categories_and_associated_blogs[categoryName].categorySlug %>/blog-posting/<%= blog.slug %>">
+                                <%= blog.title %>
+                              </a></li>
+                            <% }); %>
+                        </ul>
                     </li>
-                  <% }); %>
+                    <% }); %>
                 </ul>
 
 
@@ -217,7 +227,8 @@
           <img src="/img/icons/pinterest_blue.svg" alt="Pinterest logo SVG image">
         </a>
 
-        <a target="_blank" rel="noopener nofollow" href="https://www.facebook.com/people/Drywall-Kingston-Earnanswers/61560891117055/">
+        <a target="_blank" rel="noopener nofollow"
+          href="https://www.facebook.com/people/Drywall-Kingston-Earnanswers/61560891117055/">
           <img src="/img/icons/facebook_blue.svg" alt="Facebook logo SVG image">
         </a>
 

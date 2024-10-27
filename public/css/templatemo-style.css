@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 /**
 
 Mini Profile Template
@@ -32,7 +34,8 @@ body {
   font-size: 18px;
   font-weight: 400; */
 
-  font-family: "Freeman", sans-serif;
+  /* font-family: "Freeman", sans-serif; */
+  font-family: "Exo 2", serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: .5px;

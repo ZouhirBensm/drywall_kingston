@@ -9,7 +9,7 @@
 //     {
 //       "@type": "ListItem",
 //       "position": 1,
-//       "name": "Drywall Kingston Residential & Commercial Contractor",
+//       "name": "Drywall Kingston Repair Services",
 //       "item": "https://drywallkingston.com/"
 //     },
 //     {
@@ -52,19 +52,19 @@
 //       "@type": "ListItem",
 //       "position": 8,
 //       "name": "Drywall Installation",
-//       "item": "https://drywallkingston.com/service/drywall-installation"
+//       "item": "https://drywallkingston.com/service/drywall-installation-service"
 //     },
 //     {
 //       "@type": "ListItem",
 //       "position": 9,
 //       "name": "Drywall Repair and Patching",
-//       "item": "https://drywallkingston.com/service/drywall-repair-and-patching"
+//       "item": "https://drywallkingston.com/service/drywall-repair-and-patching-services"
 //     },
 //     {
 //       "@type": "ListItem",
 //       "position": 10,
 //       "name": "Drywall Finishing and Texturing",
-//       "item": "https://drywallkingston.com/service/drywall-finishing-and-texturing"
+//       "item": "https://drywallkingston.com/service/drywall-finishing-and-texturing-service"
 //     },
 //     {
 //       "@type": "ListItem",
@@ -215,16 +215,17 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
 
   // Static breadcrumb items
   const staticItems = [
-    { name: "Drywall Kingston Residential & Commercial Contractor", item: "https://drywallkingston.com/" },
+    { name: "Drywall Kingston Repair Services", item: "https://drywallkingston.com/" },
     { name: "Request Free Quote", item: "https://drywallkingston.com/request-free-quote" },
     { name: "Organization", item: "https://drywallkingston.com/organization" },
     { name: "About Us", item: "https://drywallkingston.com/about" },
     { name: "Sitemap", item: "https://drywallkingston.com/sitemap" },
     { name: "Legal Disclaimer", item: "https://drywallkingston.com/tiroir1/legal-disclaimer" },
     { name: "Privacy Policy", item: "https://drywallkingston.com/tiroir1/privacy-policy" },
-    { name: "Drywall Installation", item: "https://drywallkingston.com/service/drywall-installation" },
-    { name: "Drywall Repair and Patching", item: "https://drywallkingston.com/service/drywall-repair-and-patching" },
-    { name: "Drywall Finishing and Texturing", item: "https://drywallkingston.com/service/drywall-finishing-and-texturing" }
+    { name: "Drywall Installation", item: "https://drywallkingston.com/service/drywall-installation-service" },
+    { name: "Drywall Repair and Patching", item: "https://drywallkingston.com/service/drywall-repair-and-patching-services" },
+    { name: "Drywall Finishing and Texturing", item: "https://drywallkingston.com/service/drywall-finishing-and-texturing-service" },
+    { name: "Drywall Water Damage Repair Services", item: "https://drywallkingston.com/service/drywall-water-damage-repair" }
   ];
 
   // Add static items

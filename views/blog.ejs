@@ -36,24 +36,25 @@
 
   <title>Blog</title>
   <meta name="title" content="Blog">
-  <meta name="description" content="Visit the Drywall Kingston blog for expert tips, industry insights, and the latest news in drywall installation, repair, and finishing. Stay informed and inspired.">
+  <meta name="description"
+    content="Visit the Drywall Kingston blog for expert tips, industry insights, and the latest news in drywall installation, repair, and finishing. Stay informed and inspired.">
 
   <script>
     console.log('Production:', '<%= locals.production %>');
     console.log('Env:', '<%= locals.env %>');
   </script>
-  
-  <% if (locals.env === locals.production) { %>
+
+  <% if (locals.env===locals.production) { %>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVQMQ78LBR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
       gtag('config', 'G-PVQMQ78LBR');
     </script>
-  <% } %>
+    <% } %>
 
 </head>
 
@@ -79,7 +80,8 @@
 
 
   <!-- Welcome Section -->
-  <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="/img/drywall-kingston1.avif" alt="Professional drywall installer in Kingston, Ontario applying joint compound to a wall around a window frame.">
+  <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="/img/drywall-kingston1.avif"
+    alt="Professional drywall installer in Kingston, Ontario applying joint compound to a wall around a window frame.">
 
 
     <div class="container-fluid tm-brand-container-outer">
@@ -92,8 +94,11 @@
             <div class="tm-brand-container text-center">
               <h1 class="tm-brand-name">Blog</h1>
               <p class="tm-brand-description">Drywall Kingston 🇨🇦</p>
-              <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
-                Book a call
+              <!-- <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
+                  Book a call
+                </a> -->
+              <a class="animated-text blue mb-0" href="tel:3434771480">
+                +1 (343) 477 1480
               </a>
             </div>
           </div>
@@ -109,7 +114,7 @@
           <div class="col-md-7 tm-welcome-left-col">
             <div class="tm-welcome-left">
               <span class="tm-welcome-title">Address</span>
-             <p class="pb-0" itemscope itemtype="https://schema.org/Organization">
+              <p class="pb-0" itemscope itemtype="https://schema.org/Organization">
                 <a rel="nofollow" href="/organization" itemprop="url">1786 Bath Rd #18
                   Kingston, ON K7M 4Y2
                   Canada</a>
@@ -155,26 +160,28 @@
 
 
   <!-- Portfolio section -->
-<section id="tmPortfolio">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <div>
-          <h2>Blog</h2>
-          <h3>Categories</h3>
+  <section id="tmPortfolio">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div>
+            <h2>Blog</h2>
+            <h3>Categories</h3>
 
-          <ul>
-            <% categories.forEach(function(category) { %>
-              <li><a href="/blog/<%= category.slug %>"><%= category.category_name %></a></li>
-            <% }); %>
-          </ul>
+            <ul>
+              <% categories.forEach(function(category) { %>
+                <li><a href="/blog/<%= category.slug %>">
+                    <%= category.category_name %>
+                  </a></li>
+                <% }); %>
+            </ul>
 
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -192,7 +199,8 @@
           <img src="/img/icons/pinterest_blue.svg" alt="Pinterest logo SVG image">
         </a>
 
-        <a target="_blank" rel="noopener nofollow" href="https://www.facebook.com/people/Drywall-Kingston-Earnanswers/61560891117055/">
+        <a target="_blank" rel="noopener nofollow"
+          href="https://www.facebook.com/people/Drywall-Kingston-Earnanswers/61560891117055/">
           <img src="/img/icons/facebook_blue.svg" alt="Facebook logo SVG image">
         </a>
 

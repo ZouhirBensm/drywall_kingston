@@ -28,38 +28,59 @@ section#tmPortfolio .tm-portfolio-item:nth-of-type(2) .tm-portfolio-name {
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(3) .tm-portfolio-name {
-  background-image: url('../img/drywall-texturing.avif');
+  background-image: url('../img/water.webp');
 }
 
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(4) .tm-portfolio-name {
-  background-image: url('../img/drywall_extra.avif');
+  background-image: url('../img/drywall-texturing.avif');
 }
+
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(5) .tm-portfolio-name {
-  background-image: url('../img/drywall_more_services.avif');
+  background-image: url('../img/wall.webp');
 }
-
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(6) .tm-portfolio-name {
-  background-image: url('../img/drywall_industry_overview.avif');
+  background-image: url('../img/basement.webp');
 }
 
 
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(7) .tm-portfolio-name {
-  background-image: url('../img/benefits_of_professional_drywall_services.avif');
+  background-image: url('../img/drywall_more_services.avif');
 }
 
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(8) .tm-portfolio-name {
+  background-image: url('../img/drywall_industry_overview.avif');
+}
+
+
+
+/* Select the third occurrence of the matched div */
+section#tmPortfolio .tm-portfolio-item:nth-of-type(9) .tm-portfolio-name {
+  background-image: url('../img/benefits_of_professional_drywall_services.avif');
+}
+
+
+/* Select the third occurrence of the matched div */
+section#tmPortfolio .tm-portfolio-item:nth-of-type(10) .tm-portfolio-name {
   background-image: url('../img/future_trends_in_the_drywall_industry.avif');
 }
+
+
+
+
+
+
+
+
 
 
 

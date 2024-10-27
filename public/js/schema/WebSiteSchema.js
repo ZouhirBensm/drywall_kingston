@@ -2,7 +2,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "https://drywallkingston.com", // Place real website URL here
-  "name": "Drywall Kingston Earnanswers" // Place business name here
+  "name": "Drywall Repair Services Kingston Earnanswers" // Place business name here
 };
 
 const script1 = document.createElement('script');

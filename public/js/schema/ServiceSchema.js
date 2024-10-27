@@ -4,7 +4,7 @@ const serviceSchema = {
   "serviceType": "Drywall Services",
   "provider": {
     "@type": "LocalBusiness",
-    "name": "Drywall Kingston Earnanswers",
+    "name": "Drywall Repair Services Kingston Earnanswers",
     "description": "We provide top-notch drywall installation and repair services for residential and commercial properties in the Kingston area.",
     "address": {
       "@type": "PostalAddress",
@@ -50,10 +50,10 @@ const serviceSchema = {
             "name": "Drywall Installation",
             "description": "Expert Drywall Installation Services for Residential and Commercial Projects",
             "image": "https://drywallkingston.com/img/drywall-installation.avif",
-            "url": "https://drywallkingston.com/service/drywall-installation",
+            "url": "https://drywallkingston.com/service/drywall-installation-service",
             "provider": {
               "@type": "LocalBusiness",
-              "name": "Drywall Kingston Earnanswers"
+              "name": "Drywall Repair Services Kingston Earnanswers"
             }
           },
           "priceCurrency": "CAD",
@@ -67,10 +67,10 @@ const serviceSchema = {
             "name": "Drywall Repair and Patching",
             "description": "Reliable Drywall Repair and Patching Services for Homes and Businesses",
             "image": "https://drywallkingston.com/img/drywall-repair.avif",
-            "url": "https://drywallkingston.com/service/drywall-repair-and-patching",
+            "url": "https://drywallkingston.com/service/drywall-repair-and-patching-services",
             "provider": {
               "@type": "LocalBusiness",
-              "name": "Drywall Kingston Earnanswers"
+              "name": "Drywall Repair Services Kingston Earnanswers"
             }
           },
           "priceCurrency": "CAD",
@@ -84,10 +84,27 @@ const serviceSchema = {
             "name": "Drywall Finishing and Texturing",
             "description": "Professional Drywall Finishing and Texturing for a Perfect Finish",
             "image": "https://drywallkingston.com/img/drywall-texturing.avif",
-            "url": "https://drywallkingston.com/service/drywall-finishing-and-texturing",
+            "url": "https://drywallkingston.com/service/drywall-finishing-and-texturing-service",
             "provider": {
               "@type": "LocalBusiness",
-              "name": "Drywall Kingston Earnanswers"
+              "name": "Drywall Repair Services Kingston Earnanswers"
+            }
+          },
+          "priceCurrency": "CAD",
+          // "price": "40.00"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Drywall Water Damage Repair Services",
+            "name": "Drywall Water Damage Repair Services",
+            "description": "Our team identifies the source of the damage, removes compromised sections, and installs new drywall with a seamless finish.",
+            "image": "https://drywallkingston.com/img/water.webp",
+            "url": "https://drywallkingston.com/service/drywall-water-damage-repair",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Drywall Repair Services Kingston Earnanswers"
             }
           },
           "priceCurrency": "CAD",
@@ -107,7 +124,7 @@ const serviceSchema = {
           "ratingValue": "5",
           "bestRating": "5"
         },
-        "reviewBody": "Drywall Kingston Earnanswers did an outstanding job on my project. Their team was professional, efficient, and delivered top-quality work. They kept me informed throughout the process and made sure everything was completed on time and within budget. I highly recommend them for anyone looking for reliable and expert drywall services!"
+        "reviewBody": "Drywall Repair Services Kingston Earnanswers did an outstanding job on my project. Their team was professional, efficient, and delivered top-quality work. They kept me informed throughout the process and made sure everything was completed on time and within budget. I highly recommend them for anyone looking for reliable and expert drywall services!"
       },
       {
         "@type": "Review",

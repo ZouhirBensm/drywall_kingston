@@ -27,12 +27,15 @@
   <link rel="stylesheet" href="/css/blog-posting.css" />
 
 
-  <title class="title-template"><%= blogData.title %></title>
+  <title class="title-template">
+    <%= blogData.title %>
+  </title>
   <!-- <meta name="title" content="Blog Post"> -->
-  <meta name="description" content="Stay updated with the latest tips, trends, and insights from the drywall industry on the Drywall Kingston blog. Read our expert articles to enhance your knowledge.">
+  <meta name="description"
+    content="Stay updated with the latest tips, trends, and insights from the drywall industry on the Drywall Kingston blog. Read our expert articles to enhance your knowledge.">
 
   <script>
-    window.blogData = <%- JSON.stringify(blogData) %>;
+    window.blogData = <% - JSON.stringify(blogData) %>;
     // window.blogData = < %- blogData %>;
 
     console.log(blogData)
@@ -46,17 +49,17 @@
     console.log('Env:', '<%= locals.env %>');
   </script>
 
-  <% if (locals.env === locals.production) { %>
+  <% if (locals.env===locals.production) { %>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVQMQ78LBR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
       gtag('config', 'G-PVQMQ78LBR');
     </script>
-  <% } %>
+    <% } %>
 
 
 
@@ -97,10 +100,15 @@
           <!-- Black transparent bg -->
           <div class="ml-auto mr-0 tm-bg-blue-transparent text-white tm-brand-container-inner">
             <div class="tm-brand-container text-center">
-              <h1 class="tm-brand-name title-template"><%= blogData.title %></h1>
+              <h1 class="tm-brand-name title-template">
+                <%= blogData.title %>
+              </h1>
               <p class="tm-brand-description">Drywall Kingston 🇨🇦</p>
-              <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
-                Book a call
+              <!-- <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
+                  Book a call
+                </a> -->
+              <a class="animated-text blue mb-0" href="tel:3434771480">
+                +1 (343) 477 1480
               </a>
             </div>
           </div>
@@ -168,21 +176,17 @@
         <div id="blog-posting" class="col-12">
           <div>
             <div id="bar1">
-              <span class="category-template"><%= blogData.category.category_name %></span>
+              <span class="category-template">
+                <%= blogData.category.category_name %>
+              </span>
               <div id="dates">
                 <span id="date-published">
-                  Published: <%= new Date(blogData.datetime_published).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                  }) %>
+                  Published: <%= new Date(blogData.datetime_published).toLocaleDateString('en-US', { year: 'numeric' ,
+                    month: 'short' , day: 'numeric' }) %>
                 </span>
                 <span id="date-edited">
-                  Edited: <%= new Date(blogData.datetime_edited).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                  }) %>
+                  Edited: <%= new Date(blogData.datetime_edited).toLocaleDateString('en-US', { year: 'numeric' ,
+                    month: 'short' , day: 'numeric' }) %>
                 </span>
               </div>
             </div>
@@ -211,7 +215,8 @@
           <img src="/img/icons/pinterest_blue.svg" alt="Pinterest logo SVG image">
         </a>
 
-        <a target="_blank" rel="noopener nofollow" href="https://www.facebook.com/people/Drywall-Kingston-Earnanswers/61560891117055/">
+        <a target="_blank" rel="noopener nofollow"
+          href="https://www.facebook.com/people/Drywall-Kingston-Earnanswers/61560891117055/">
           <img src="/img/icons/facebook_blue.svg" alt="Facebook logo SVG image">
         </a>
 
@@ -272,9 +277,9 @@
 
     document.addEventListener('DOMContentLoaded', function () {
 
-      const blogData = <%- JSON.stringify(blogData) %>
-      // console.log('=> ', window.blogData)
-      console.log('=> ', blogData)
+      const blogData = <% - JSON.stringify(blogData) %>
+        // console.log('=> ', window.blogData)
+        console.log('=> ', blogData)
 
       // Function to strip HTML tags
       function stripHTML(html) {

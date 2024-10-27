@@ -96,7 +96,9 @@ const goneUrls = [
   "/blog/%7BCategory%7D/blog-posting/drywall-companies-in-kingston-ontario",
   "/blog/%7BCategory%7D/blog-posting/best-drywall-kingston",
   "/drywall/drywall-companies-in-kingston-ontario",
-  "/service/drywall-companies-in-kingston-ontario"
+  "/service/drywall-companies-in-kingston-ontario",
+  "/service/drywall-installation",
+  "/service/drywall-finishing-and-texturing"
 ];
 
 
@@ -213,23 +215,44 @@ app.get('/car', (req, res) => {
 
 
 
-app.get('/service/drywall-installation', (req, res) => {
+app.get('/service/drywall-installation-service', (req, res) => {
   return res.render('drywall-installation');
   // return res.sendFile('drywall-installation.html', { root: 'public' });
 });
 
 
-app.get('/service/drywall-repair-and-patching', (req, res) => {
+app.get('/service/drywall-repair-and-patching-services', (req, res) => {
   return res.render('drywall-repair-and-patching');
   // return res.sendFile('drywall-repair-and-patching.html', { root: 'public' });
 });
 
 
+app.get('/service/drywall-water-damage-repair', (req, res) => {
+  return res.render('drywall-water-damage-repair');
+  // return res.sendFile('drywall-repair-and-patching.html', { root: 'public' });
+});
 
-app.get('/service/drywall-finishing-and-texturing', (req, res) => {
+
+
+app.get('/service/drywall-finishing-and-texturing-service', (req, res) => {
   return res.render('drywall-finishing-and-texturing');
   // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
 });
+
+
+
+app.get('/service/partition-walls-installation', (req, res) => {
+  return res.render('partition-walls-installation');
+  // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
+});
+
+app.get('/service/basement-rennovation-and-finishing-services', (req, res) => {
+  return res.render('basement-rennovation-and-finishing-services');
+  // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
+});
+
+
+
 
 
 
@@ -600,19 +623,19 @@ app.get('/sitemap/sitemap-1', async (req, res) => {
     // },
 
     {
-      URL: '/service/drywall-installation',
+      URL: '/service/drywall-installation-service',
       lastmod: last_modified_4_date,
       changefreq: "monthly",
       priority: 1
     },
     {
-      URL: '/service/drywall-repair-and-patching',
+      URL: '/service/drywall-repair-and-patching-services',
       lastmod: last_modified_4_date,
       changefreq: "monthly",
       priority: 1
     },
     {
-      URL: '/service/drywall-finishing-and-texturing',
+      URL: '/service/drywall-finishing-and-texturing-service',
       lastmod: last_modified_4_date,
       changefreq: "monthly",
       priority: 1
