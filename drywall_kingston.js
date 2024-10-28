@@ -546,7 +546,7 @@ app.get('/tiroir1/privacy-policy', (req, res) => {
 
 
 
-app.get('/sitemap/sitemap-1', async (req, res) => {
+app.get('/sitemap/sitemap-5', async (req, res) => {
   // Define the path to the XML file
   const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 
@@ -557,7 +557,7 @@ app.get('/sitemap/sitemap-1', async (req, res) => {
   }
 
   const now = new Date();
-  console.log(now);
+  console.log('Now -> ', now);
 
   let last_modified_1 = '2024-06-02T15:07:49.699Z';
   let last_modified_1_date = new Date(last_modified_1);
@@ -570,6 +570,9 @@ app.get('/sitemap/sitemap-1', async (req, res) => {
 
   let last_modified_5 = '2024-10-07T18:42:50.563Z';
   let last_modified_5_date = new Date(last_modified_4);
+
+  let last_modified_6 = '2024-10-28T15:38:48.402Z';
+  let last_modified_6_date = new Date(last_modified_6);
 
   const urls = [
     {
@@ -635,8 +638,26 @@ app.get('/sitemap/sitemap-1', async (req, res) => {
       priority: 1
     },
     {
+      URL: '/service/drywall-water-damage-repair',
+      lastmod: last_modified_6_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
       URL: '/service/drywall-finishing-and-texturing-service',
       lastmod: last_modified_4_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/service/partition-walls-installation',
+      lastmod: last_modified_6_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/service/basement-rennovation-and-finishing-services',
+      lastmod: last_modified_6_date,
       changefreq: "monthly",
       priority: 1
     }
@@ -718,7 +739,7 @@ app.get('/sitemap/sitemap-1', async (req, res) => {
 
   });
 
-  // console.log(urls)
+  console.log('\n\nURLs ->\n\n', urls)
 
   const xml = createSiteMap(urls);
 
