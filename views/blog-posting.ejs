@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%- blogData.lang %>">
 
 <head>
   <meta charset="UTF-8" />
@@ -62,7 +62,7 @@
     <% } %>
 
 
-
+    <meta http-equiv="content-language" content="<%- blogData.lang %>">
 
 </head>
 
@@ -296,6 +296,7 @@
         "articleBody": stripHTML(blogData.htmlContent),
         "datePublished": blogData.datePublished,
         "dateModified": blogData.dateModified,
+        "inLanguage": blogData.lang,
         // "author": {
         //   "@type": "Organization",
         //   "url": "https://drywallkingston.com/organization"

@@ -270,14 +270,13 @@ app.get('/service/:extra_service_page_title_for_seo', async (req, res, next) => 
 
   redirected_seo_pages = ['drywall-companies-in-kingston', 'drywall-kingston-ltd', 'drywall-kingston-prices', 'drywall-kingston-cost', 'best-drywall-kingston']
 
-  console.log('**', redirected_seo_pages.includes(extra_service_page_title_for_seo))
+  // console.log('**', redirected_seo_pages.includes(extra_service_page_title_for_seo))
 
 
-  // For SEO Keep until google identifies the redirects
+  // For SEO Keep until google identifies the deletes
   if (redirected_seo_pages.includes(extra_service_page_title_for_seo)) {
-    console.log(extra_service_page_title_for_seo);
-    const newUrl = `/drywall/${extra_service_page_title_for_seo}`;
-    return res.redirect(301, newUrl);
+    // console.log(extra_service_page_title_for_seo);
+    return res.status(410).send('This page has been permanently removed.');
   }
 
   let db_service_page
@@ -387,7 +386,9 @@ app.get('/sitemap', async (req, res) => {
 
 
 
-
+app.get('/drywall/:param?', (req, res) => {
+  res.status(410).send('This page has been permanently removed.');
+})
 
 
 
@@ -474,7 +475,7 @@ app.get('/blog/:category', async (req, res) => {
 
 
 
-app.get('/blog/:category/blog-posting/:title', async (req, res) => {
+app.get('/blog/:category/blog-posting/:title', async (req, res, next) => {
 
 
   const now = new Date()
@@ -482,8 +483,6 @@ app.get('/blog/:category/blog-posting/:title', async (req, res) => {
 
   const { title, category } = req.params;
 
-
-  let titles_of_extra_services = ['Drywall Companies In Kingston', 'Drywall Kingston Ltd', 'Drywall Kingston Prices', 'Drywall Kingston Cost', 'Best Drywall Kingston']
 
 
 
@@ -512,10 +511,6 @@ app.get('/blog/:category/blog-posting/:title', async (req, res) => {
     return next(error)
   }
 
-  if (titles_of_extra_services.includes(blog_element.title)) {
-    const newUrl = `/drywall/${title}`;
-    return res.redirect(301, newUrl);
-  }
 
 
   return res.render('blog-posting', {
@@ -546,7 +541,7 @@ app.get('/tiroir1/privacy-policy', (req, res) => {
 
 
 
-app.get('/sitemap/sitemap-5', async (req, res) => {
+app.get('/sitemap/sitemap-6', async (req, res) => {
   // Define the path to the XML file
   const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 
@@ -748,6 +743,14 @@ app.get('/sitemap/sitemap-5', async (req, res) => {
 
   // return res.render('sitemap');
   // return res.sendFile('sitemap.html', { root: 'public' });
+
+  // Set cache-control headers to prevent caching
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  res.set('Surrogate-Control', 'no-store');
+
+
   return res.redirect(301, '/sitemap');
 });
 
