@@ -34,13 +34,6 @@
   <meta name="description"
     content="Stay updated with the latest tips, trends, and insights from the drywall industry on the Drywall Kingston blog. Read our expert articles to enhance your knowledge.">
 
-  <script>
-    window.blogData = <% - JSON.stringify(blogData) %>;
-    // window.blogData = < %- blogData %>;
-
-    console.log(blogData)
-  </script>
-
 
 
 
@@ -277,9 +270,9 @@
 
     document.addEventListener('DOMContentLoaded', function () {
 
-      const blogData = <% - JSON.stringify(blogData) %>
-        // console.log('=> ', window.blogData)
-        console.log('=> ', blogData)
+      const blogData = <%- JSON.stringify(blogData) %>
+
+      console.log('=> ', blogData)
 
       // Function to strip HTML tags
       function stripHTML(html) {

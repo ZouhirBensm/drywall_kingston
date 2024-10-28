@@ -37,7 +37,7 @@
   <meta name="description"
     content="Discover our comprehensive range of drywall services designed to meet all your construction needs. From installation to finishing, Drywall Kingston has you covered.">
   <script>
-    window.blogData = <% - JSON.stringify(blogData) %>;
+    window.blogData = <%- JSON.stringify(blogData) %>;
   </script>
 
   <script>
@@ -261,65 +261,17 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Retrieve the JSON data from the embedded script variable
       if (window.blogData) {
-
-        // const categoryElements = document.querySelectorAll('.category-template');
-        // console.log(categoryElements)
-        // categoryElements.forEach(element => {
-        //   const category = window.blogData.category;
-        //   element.textContent = category;
-        // });
-
         const titleElements = document.querySelectorAll('.title-template');
         console.log(titleElements)
         titleElements.forEach(element => {
           const title = window.blogData.title;
           element.textContent = title;
         });
-
         document.getElementById('content-template').innerHTML = window.blogData.htmlContent;
       } else {
-
-
       }
-
-      // // Function to strip HTML tags
-      // function stripHTML(html) {
-      //   var tmp = document.createElement("DIV");
-      //   tmp.innerHTML = html;
-      //   return tmp.textContent || tmp.innerText || "";
-      // }
-
-      // const blogData = {
-      //   "@context": "https://schema.org",
-      //   "@type": "BlogPosting",
-      //   "headline": window.blogData.title,
-      //   "about": window.blogData.category,
-      //   "articleBody": stripHTML(window.blogData.htmlContent),
-      //   "datePublished": window.blogData.datePublished,
-      //   "dateModified": window.blogData.dateModified,
-      //   // "author": {
-      //   //   "@type": "Organization",
-      //   //   "url": "https://drywallkingston.com/organization"
-      //   // },
-      //   "publisher": {
-      //     "@type": "Organization",
-      //     "name": "Drywall Kingston",
-      //     "logo": {
-      //       "@type": "ImageObject",
-      //       "url": "https://drywallkingston.com/img/logo_head2.png"
-      //     }
-      //   }
-      // };
-
-      // // Create a script element for JSON-LD
-      // const scriptElement = document.createElement('script');
-      // scriptElement.type = 'application/ld+json';
-      // scriptElement.text = JSON.stringify(blogData);
-      // document.head.appendChild(scriptElement);
     });
-
   </script>
 
 
