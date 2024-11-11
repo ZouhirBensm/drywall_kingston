@@ -174,11 +174,11 @@
               </span>
               <div id="dates">
                 <span id="date-published">
-                  Published: <%= new Date(blogData.datetime_published).toLocaleDateString('en-US', { year: 'numeric' ,
+                  <b><u>Published</u></b>: <%= new Date(blogData.datetime_published).toLocaleDateString('en-US', { year: 'numeric' ,
                     month: 'short' , day: 'numeric' }) %>
                 </span>
                 <span id="date-edited">
-                  Edited: <%= new Date(blogData.datetime_edited).toLocaleDateString('en-US', { year: 'numeric' ,
+                  <b><u>Edited</u></b>: <%= new Date(blogData.datetime_edited).toLocaleDateString('en-US', { year: 'numeric' ,
                     month: 'short' , day: 'numeric' }) %>
                 </span>
               </div>

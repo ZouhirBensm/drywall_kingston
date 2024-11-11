@@ -47,6 +47,10 @@ app.use(express.static('public'));
 
 
 app.use((req, res, next) => {
+
+  let now = new Date()
+  console.log('\n\nnow-> ', now)
+  
   res.locals.env = process.env.NODE_ENV;
   res.locals.production = ENVIRONMENT.PRODUCTION;
   return next()
