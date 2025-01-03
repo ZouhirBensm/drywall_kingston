@@ -215,7 +215,7 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
 
   // Static breadcrumb items
   const staticItems = [
-    { name: "Drywall Kingston Repair Services", item: "https://drywallkingston.com/" },
+    { name: "Drywall Kingston Repair Services Contractor Earnanswers", item: "https://drywallkingston.com/" },
     { name: "Request Free Quote", item: "https://drywallkingston.com/request-free-quote" },
     { name: "Organization", item: "https://drywallkingston.com/organization" },
     { name: "About Us", item: "https://drywallkingston.com/about" },
