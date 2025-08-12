@@ -186,7 +186,7 @@ app.get('/', async (req, res) => {
     return next(error)
   }
 
-  console.log(blog_elements)
+  // console.log(blog_elements)
   // console.log(service_pages)
 
   return res.render('index3', {
@@ -595,10 +595,28 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
   let last_modified_6 = '2024-10-28T15:38:48.402Z';
   let last_modified_6_date = new Date(last_modified_6);
 
+
+    
+  const drywall_kingston_home_page = await db.drywall_kingston_home_page.findAll({
+    attributes: ['id', 'home_page_updated_date', 'home_page_published_date'],
+    raw: true
+  });
+
+  if (!drywall_kingston_home_page) {
+    const error = new Error("No drywall_kingston_home_page found!")
+    return next(error)
+  }
+
+
+  console.log("\n\ndrywall_kingston_home_page.home_page_updated_date\n\n", drywall_kingston_home_page[0].home_page_updated_date)
+
+  let last_modified_7_date = new Date(drywall_kingston_home_page[0].home_page_updated_date);
+
+
   const urls = [
     {
       URL: '/',
-      lastmod: last_modified_4_date,
+      lastmod: last_modified_7_date,
       changefreq: "monthly",
       priority: 1
     },
