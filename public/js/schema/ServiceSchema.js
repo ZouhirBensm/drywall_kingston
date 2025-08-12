@@ -67,7 +67,7 @@ const serviceSchema = {
             "name": "Drywall Repair and Patching",
             "description": "Reliable Drywall Repair and Patching Services for Homes and Businesses",
             "image": "https://drywallkingston.com/img/drywall-repair.avif",
-            "url": "https://drywallkingston.com/service/drywall-repair-and-patching-services",
+            "url": "https://drywallkingston.com/service/drywall-repair-and-wall-patching-services-near-me",
             "provider": {
               "@type": "LocalBusiness",
               "name": "Drywall Repair Services Kingston Earnanswers"
@@ -84,7 +84,7 @@ const serviceSchema = {
             "name": "Drywall Finishing and Texturing",
             "description": "Professional Drywall Finishing and Texturing for a Perfect Finish",
             "image": "https://drywallkingston.com/img/drywall-texturing.avif",
-            "url": "https://drywallkingston.com/service/drywall-finishing-and-texturing-service",
+            "url": "https://drywallkingston.com/service/drywall-finishing-texturing-and-popcorn-ceiling-removal",
             "provider": {
               "@type": "LocalBusiness",
               "name": "Drywall Repair Services Kingston Earnanswers"
@@ -101,7 +101,7 @@ const serviceSchema = {
             "name": "Drywall Water Damage Repair Services",
             "description": "Our team identifies the source of the damage, removes compromised sections, and installs new drywall with a seamless finish.",
             "image": "https://drywallkingston.com/img/water.webp",
-            "url": "https://drywallkingston.com/service/drywall-water-damage-repair",
+            "url": "https://drywallkingston.com/service/drywall-water-damage-and-plaster-repair-services",
             "provider": {
               "@type": "LocalBusiness",
               "name": "Drywall Repair Services Kingston Earnanswers"

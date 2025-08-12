@@ -242,38 +242,38 @@ app.get('/car', (req, res) => {
 
 
 app.get('/service/drywall-installation-service', (req, res) => {
-  return res.render('drywall-installation');
+  return res.render('drywall-installation-service');
   // return res.sendFile('drywall-installation.html', { root: 'public' });
 });
 
 
-app.get('/service/drywall-repair-and-patching-services', (req, res) => {
-  return res.render('drywall-repair-and-patching');
+app.get('/service/drywall-repair-and-wall-patching-services-near-me', (req, res) => {
+  return res.render('drywall-repair-and-wall-patching-services-near-me');
   // return res.sendFile('drywall-repair-and-patching.html', { root: 'public' });
 });
 
 
-app.get('/service/drywall-water-damage-repair', (req, res) => {
-  return res.render('drywall-water-damage-repair');
+app.get('/service/drywall-water-damage-and-plaster-repair-services', (req, res) => {
+  return res.render('drywall-water-damage-and-plaster-repair-services');
   // return res.sendFile('drywall-repair-and-patching.html', { root: 'public' });
 });
 
 
 
-app.get('/service/drywall-finishing-and-texturing-service', (req, res) => {
-  return res.render('drywall-finishing-and-texturing');
+app.get('/service/drywall-finishing-texturing-and-popcorn-ceiling-removal', (req, res) => {
+  return res.render('drywall-finishing-texturing-and-popcorn-ceiling-removal');
   // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
 });
 
 
 
-app.get('/service/partition-walls-installation', (req, res) => {
-  return res.render('partition-walls-installation');
+app.get('/service/partition-walls-installation-services', (req, res) => {
+  return res.render('partition-walls-installation-services');
   // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
 });
 
-app.get('/service/basement-rennovation-and-finishing-services', (req, res) => {
-  return res.render('basement-rennovation-and-finishing-services');
+app.get('/service/basement-renovation-and-finishing-services', (req, res) => {
+  return res.render('basement-renovation-and-finishing-services');
   // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
 });
 
@@ -671,31 +671,31 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
       priority: 1
     },
     {
-      URL: '/service/drywall-repair-and-patching-services',
+      URL: '/service/drywall-repair-and-wall-patching-services-near-me',
       lastmod: last_modified_4_date,
       changefreq: "monthly",
       priority: 1
     },
     {
-      URL: '/service/drywall-water-damage-repair',
+      URL: '/service/drywall-water-damage-and-plaster-repair-services',
       lastmod: last_modified_6_date,
       changefreq: "monthly",
       priority: 1
     },
     {
-      URL: '/service/drywall-finishing-and-texturing-service',
+      URL: '/service/drywall-finishing-texturing-and-popcorn-ceiling-removal',
       lastmod: last_modified_4_date,
       changefreq: "monthly",
       priority: 1
     },
     {
-      URL: '/service/partition-walls-installation',
+      URL: '/service/partition-walls-installation-services',
       lastmod: last_modified_6_date,
       changefreq: "monthly",
       priority: 1
     },
     {
-      URL: '/service/basement-rennovation-and-finishing-services',
+      URL: '/service/basement-renovation-and-finishing-services',
       lastmod: last_modified_6_date,
       changefreq: "monthly",
       priority: 1

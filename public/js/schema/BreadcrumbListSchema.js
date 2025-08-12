@@ -58,31 +58,31 @@
 //       "@type": "ListItem",
 //       "position": 9,
 //       "name": "Drywall Repair and Patching",
-//       "item": "https://drywallkingston.com/service/drywall-repair-and-patching-services"
+//       "item": "https://drywallkingston.com/service/drywall-repair-and-wall-patching-services-near-me"
 //     },
 //     {
 //       "@type": "ListItem",
 //       "position": 10,
 //       "name": "Drywall Finishing and Texturing",
-//       "item": "https://drywallkingston.com/service/drywall-finishing-and-texturing-service"
+//       "item": "https://drywallkingston.com/service/drywall-finishing-texturing-and-popcorn-ceiling-removal"
 //     },
 //     {
 //       "@type": "ListItem",
 //       "position": 11,
-//       "name": "Steel Stud Framing",
-//       "item": "https://drywallkingston.com/service/steel-stud-framing"
+//       "name": "Steel Stud Framing Services",
+//       "item": "https://drywallkingston.com/service/steel-stud-framing-services"
 //     },
 //     {
 //       "@type": "ListItem",
 //       "position": 12,
-//       "name": "Blown and Batt Insulation",
-//       "item": "https://drywallkingston.com/service/blown-and-batt-insulation"
+//       "name": "Drywall and Insulation Contractors",
+//       "item": "https://drywallkingston.com/service/drywall-and-insulation-contractors"
 //     },
 //     {
 //       "@type": "ListItem",
 //       "position": 13,
-//       "name": "Suspended T-Bar Ceilings",
-//       "item": "https://drywallkingston.com/service/suspended-t-bar-ceilings"
+//       "name": "Suspended T-Bar Ceiling Services",
+//       "item": "https://drywallkingston.com/service/suspended-t-bar-ceiling-services"
 //     },
 //     {
 //       "@type": "ListItem",
@@ -93,14 +93,14 @@
 //     {
 //       "@type": "ListItem",
 //       "position": 15,
-//       "name": "Cove Moldings and Bulkheads",
-//       "item": "https://drywallkingston.com/service/cove-moldings-and-bulkheads"
+//       "name": "Cove Moldings and Bulkhead Services",
+//       "item": "https://drywallkingston.com/service/cove-moldings-and-bulkhead-services"
 //     },
 //     {
 //       "@type": "ListItem",
 //       "position": 16,
-//       "name": "Spray Priming and Painting",
-//       "item": "https://drywallkingston.com/service/spray-priming-and-painting"
+//       "name": "Painting and Drywall Repair Near Me",
+//       "item": "https://drywallkingston.com/service/painting-and-drywall-repair-near-me"
 //     },
 //     // {
 //     //   "@type": "ListItem",
@@ -223,9 +223,9 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
     { name: "Legal Disclaimer", item: "https://drywallkingston.com/tiroir1/legal-disclaimer" },
     { name: "Privacy Policy", item: "https://drywallkingston.com/tiroir1/privacy-policy" },
     { name: "Drywall Installation", item: "https://drywallkingston.com/service/drywall-installation-service" },
-    { name: "Drywall Repair and Patching", item: "https://drywallkingston.com/service/drywall-repair-and-patching-services" },
-    { name: "Drywall Finishing and Texturing", item: "https://drywallkingston.com/service/drywall-finishing-and-texturing-service" },
-    { name: "Drywall Water Damage Repair Services", item: "https://drywallkingston.com/service/drywall-water-damage-repair" }
+    { name: "Drywall Repair and Patching", item: "https://drywallkingston.com/service/drywall-repair-and-wall-patching-services-near-me" },
+    { name: "Drywall Finishing and Texturing", item: "https://drywallkingston.com/service/drywall-finishing-texturing-and-popcorn-ceiling-removal" },
+    { name: "Drywall Water Damage Repair Services", item: "https://drywallkingston.com/service/drywall-water-damage-and-plaster-repair-services" }
   ];
 
   // Add static items
