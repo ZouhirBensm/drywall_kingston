@@ -131,6 +131,23 @@ app.get('/', async (req, res) => {
   // let error = new Error("new error")
   // return next(error)
 
+
+  
+  const drywall_kingston_home_page = await db.drywall_kingston_home_page.findAll({
+    attributes: ['id', 'home_page_updated_date', 'home_page_published_date'],
+    raw: true
+  });
+
+  if (!drywall_kingston_home_page) {
+    const error = new Error("No drywall_kingston_home_page found!")
+    return next(error)
+  }
+
+
+  console.log(drywall_kingston_home_page)
+
+
+
   // Fetch the slugs from the blog_element table with the same category_id
   const blog_elements = await db.blog_element.findAll({
     // where: {
@@ -154,6 +171,9 @@ app.get('/', async (req, res) => {
     return next(error)
   }
 
+
+
+
   const service_pages = await db.service_page.findAll({
     attributes: ['slug', 'title'],
     raw: true
@@ -166,11 +186,13 @@ app.get('/', async (req, res) => {
     return next(error)
   }
 
-  console.log(blog_elements, service_pages)
+  console.log(blog_elements)
+  // console.log(service_pages)
 
   return res.render('index3', {
     blog_elements: blog_elements,
-    service_pages: service_pages
+    service_pages: service_pages,
+    drywall_kingston_home_page: drywall_kingston_home_page[0]
   });
 
 

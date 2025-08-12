@@ -31,11 +31,22 @@
     // let blog_elements = < %= blog_elements[0] %>
     // let blog_elements = JSON.stringify(< %= blog_elements[0] %>)
 
-    var blog_elements =<% -JSON.stringify(blog_elements) %>
-    var service_pages =<% -JSON.stringify(service_pages) %>
+    var blog_elements =<%-JSON.stringify(blog_elements) %>
+    var service_pages =<%-JSON.stringify(service_pages) %>
 
-    // console.log(blog_elements);
-    // console.log(service_pages);
+    console.log(blog_elements);
+    console.log(service_pages);
+
+
+    var drywall_kingston_home_page =<%-JSON.stringify(drywall_kingston_home_page) %>
+    var publishedDate =<%-JSON.stringify(drywall_kingston_home_page.home_page_published_date) %>
+    var updatedDate =<%-JSON.stringify(drywall_kingston_home_page.home_page_updated_date) %>
+
+    console.log(drywall_kingston_home_page);
+    // console.log(publishedDate);
+    // console.log(updatedDate);
+
+
 
   </script>
 
@@ -58,7 +69,7 @@ https://templatemo.com/tm-530-mini-profile
 
 
   <script>
-      console.log('Production:', '<%= locals.production %>');
+    console.log('Production:', '<%= locals.production %>');
     console.log('Env:', '<%= locals.env %>');
   </script>
 

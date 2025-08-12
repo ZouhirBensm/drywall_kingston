@@ -73,6 +73,31 @@ INSERT INTO `category` VALUES (1,'Drywall','drywall'),(2,'Agency','agency'),(3,'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `drywall_kingston_home_page`
+--
+
+DROP TABLE IF EXISTS `drywall_kingston_home_page`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `drywall_kingston_home_page` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `home_page_updated_date` date DEFAULT NULL,
+  `home_page_published_date` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `drywall_kingston_home_page`
+--
+
+LOCK TABLES `drywall_kingston_home_page` WRITE;
+/*!40000 ALTER TABLE `drywall_kingston_home_page` DISABLE KEYS */;
+INSERT INTO `drywall_kingston_home_page` VALUES (1,'2025-08-12','2025-08-12');
+/*!40000 ALTER TABLE `drywall_kingston_home_page` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `service_page`
 --
 
@@ -132,4 +157,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-30 21:02:27
+-- Dump completed on 2025-08-12 10:44:21
