@@ -608,9 +608,13 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
   }
 
 
+
   console.log("\n\ndrywall_kingston_home_page.home_page_updated_date\n\n", drywall_kingston_home_page[0].home_page_updated_date)
 
   let last_modified_7_date = new Date(drywall_kingston_home_page[0].home_page_updated_date);
+
+
+
 
 
   const urls = [
@@ -666,37 +670,37 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
 
     {
       URL: '/service/drywall-installation-service',
-      lastmod: last_modified_4_date,
+      lastmod: last_modified_7_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/service/drywall-repair-and-wall-patching-services-near-me',
-      lastmod: last_modified_4_date,
+      lastmod: last_modified_7_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/service/drywall-water-damage-and-plaster-repair-services',
-      lastmod: last_modified_6_date,
+      lastmod: last_modified_7_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/service/drywall-finishing-texturing-and-popcorn-ceiling-removal',
-      lastmod: last_modified_4_date,
+      lastmod: last_modified_7_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/service/partition-walls-installation-services',
-      lastmod: last_modified_6_date,
+      lastmod: last_modified_7_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/service/basement-renovation-and-finishing-services',
-      lastmod: last_modified_6_date,
+      lastmod: last_modified_7_date,
       changefreq: "monthly",
       priority: 1
     }
