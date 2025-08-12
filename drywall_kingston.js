@@ -189,7 +189,7 @@ app.get('/', async (req, res) => {
   // console.log(blog_elements)
   // console.log(service_pages)
 
-  return res.render('index3', {
+  return res.render('index4', {
     blog_elements: blog_elements,
     service_pages: service_pages,
     drywall_kingston_home_page: drywall_kingston_home_page[0]
