@@ -50,7 +50,7 @@ const serviceSchema = {
             "name": "Drywall Installation",
             "description": "Expert Drywall Installation Services for Residential and Commercial Projects",
             "image": "https://drywallkingston.com/img/drywall-installation.avif",
-            "url": "https://drywallkingston.com/service/drywall-installation-service",
+            "url": "https://drywallkingston.com/service/drywall-installation-services",
             "provider": {
               "@type": "LocalBusiness",
               "name": "Drywall Repair Services Kingston Earnanswers"

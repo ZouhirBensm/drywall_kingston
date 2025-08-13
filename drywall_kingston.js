@@ -241,8 +241,8 @@ app.get('/car', (req, res) => {
 
 
 
-app.get('/service/drywall-installation-service', (req, res) => {
-  return res.render('drywall-installation-service');
+app.get('/service/drywall-installation-services', (req, res) => {
+  return res.render('drywall-installation-services');
   // return res.sendFile('drywall-installation.html', { root: 'public' });
 });
 
@@ -669,7 +669,7 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
     // },
 
     {
-      URL: '/service/drywall-installation-service',
+      URL: '/service/drywall-installation-services',
       lastmod: last_modified_7_date,
       changefreq: "monthly",
       priority: 1

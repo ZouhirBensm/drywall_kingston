@@ -52,7 +52,7 @@
 //       "@type": "ListItem",
 //       "position": 8,
 //       "name": "Drywall Installation",
-//       "item": "https://drywallkingston.com/service/drywall-installation-service"
+//       "item": "https://drywallkingston.com/service/drywall-installation-services"
 //     },
 //     {
 //       "@type": "ListItem",
@@ -222,7 +222,7 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
     { name: "Sitemap", item: "https://drywallkingston.com/sitemap" },
     { name: "Legal Disclaimer", item: "https://drywallkingston.com/tiroir1/legal-disclaimer" },
     { name: "Privacy Policy", item: "https://drywallkingston.com/tiroir1/privacy-policy" },
-    { name: "Drywall Installation", item: "https://drywallkingston.com/service/drywall-installation-service" },
+    { name: "Drywall Installation", item: "https://drywallkingston.com/service/drywall-installation-services" },
     { name: "Drywall Repair and Patching", item: "https://drywallkingston.com/service/drywall-repair-and-wall-patching-services-near-me" },
     { name: "Drywall Finishing and Texturing", item: "https://drywallkingston.com/service/drywall-finishing-texturing-and-popcorn-ceiling-removal" },
     { name: "Drywall Water Damage Repair Services", item: "https://drywallkingston.com/service/drywall-water-damage-and-plaster-repair-services" }
