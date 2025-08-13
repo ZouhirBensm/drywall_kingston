@@ -148,6 +148,20 @@ app.get('/', async (req, res) => {
 
 
 
+  const main_services = await db.main_services.findAll({
+    // attributes: ['id', 'home_page_updated_date', 'home_page_published_date'],
+    raw: true
+  });
+
+  if (!main_services) {
+    const error = new Error("No main_services found!")
+    return next(error)
+  }
+
+
+  console.log(main_services)
+
+
   // Fetch the slugs from the blog_element table with the same category_id
   const blog_elements = await db.blog_element.findAll({
     // where: {
@@ -192,6 +206,7 @@ app.get('/', async (req, res) => {
   return res.render('index4', {
     blog_elements: blog_elements,
     service_pages: service_pages,
+    main_services: main_services,
     drywall_kingston_home_page: drywall_kingston_home_page[0]
   });
 
@@ -346,6 +361,23 @@ app.get('/service/:extra_service_page_title_for_seo', async (req, res, next) => 
 // HERE
 app.get('/sitemap', async (req, res) => {
 
+
+
+  const main_services = await db.main_services.findAll({
+    attributes: ['home_title', 'slug'],
+    raw: true
+  });
+
+  if (!main_services) {
+    const error = new Error("No main_services found!")
+    return next(error)
+  }
+
+
+  console.log(main_services)
+
+
+
   // Fetch the slugs from the blog_element table with the same category_id
   const blog_elements = await db.blog_element.findAll({
     // where: {
@@ -405,7 +437,8 @@ app.get('/sitemap', async (req, res) => {
   return res.render('sitemap', {
     // blog_elements: blog_elements,
     service_pages: service_pages,
-    categories_and_associated_blogs: categories_and_associated_blogs
+    categories_and_associated_blogs: categories_and_associated_blogs,
+    main_services: main_services
   });
   // return res.sendFile('sitemap.html', { root: 'public' });
 });
@@ -617,6 +650,8 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
 
 
 
+
+
   const urls = [
     {
       URL: '/',
@@ -668,44 +703,44 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
     //   priority: 1
     // },
 
-    {
-      URL: '/service/drywall-installation-services',
-      lastmod: last_modified_7_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/service/drywall-repair-and-wall-patching-services-near-me',
-      lastmod: last_modified_7_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/service/drywall-water-damage-and-plaster-repair-services',
-      lastmod: last_modified_7_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/service/drywall-finishing-texturing-and-popcorn-ceiling-removal',
-      lastmod: last_modified_7_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/service/partition-walls-installation-services',
-      lastmod: last_modified_7_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/service/basement-renovation-and-finishing-services',
-      lastmod: last_modified_7_date,
-      changefreq: "monthly",
-      priority: 1
-    }
   ];
 
+
+
+  const main_services = await db.main_services.findAll({
+    // attributes: ['id', 'home_page_updated_date', 'home_page_published_date'],
+    raw: true
+  });
+
+  if (!main_services) {
+    const error = new Error("No main_services found!")
+    return next(error)
+  }
+
+
+  console.log(main_services)
+
+
+
+  main_services.forEach(main_service => {
+
+    let url = main_service.slug;
+
+    console.log(main_service.service_page_edited)
+    console.log(new Date(main_service.service_page_edited))
+    
+    let lastmod = new Date(main_service.service_page_edited)
+
+
+    urls.push({
+      URL: url,
+      lastmod: lastmod,
+      changefreq: "monthly",
+      priority: 1
+    });
+
+
+  });
 
 
   const service_pages = await db.service_page.findAll({
@@ -781,6 +816,8 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
 
 
   });
+
+
 
   console.log('\n\nURLs ->\n\n', urls)
 

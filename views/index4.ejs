@@ -145,116 +145,26 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-green"
-                aria-label="Completed drywall installation in a newly constructed room with smooth walls and ceilings.">
-                <img src="/img/drywall-installation.avif"
-                  alt="Completed drywall installation in a newly constructed room with smooth walls and ceilings."
-                  style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Drywall Installation Services
-                  <a class="tm-title-small" href="/service/drywall-installation-services">More details</a>
-                </h2>
-                <p class="mb-0">
-                  <span>Drywall Installation Services in Kingston Ontario</span>
-                  <!-- Added repeated and one-time keywords -->
-                  <div>Our professional drywall installation services, including drywalling services and sheetrock services, are perfect for both residential and commercial projects in Kingston, Ontario. Whether you need drywall contractors for new construction, remodels, or drywall renovation near Kingston, we provide top-quality installation that ensures a smooth and durable finish. Our expert drywall contractors near me work with precision to meet your project deadlines and specifications, delivering exceptional results every time.</div>
-                </p>
-              </div>
-            </div>
 
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-orange"
-                aria-label="Close-up of a person repairing a hole in drywall using a utility knife.">
-                <img src="/img/drywall-repair.avif"
-                  alt="Close-up of a person repairing a hole in drywall using a utility knife." style="display:none;">
+            <% main_services.forEach((service, index) => { %>
+              <div class="tm-portfolio-item">
+                <div class="tm-portfolio-name text-white tm-bg-blue"
+                  aria-label="<%= service.home_img_alt %>">
+                  <img src="<%= service.home_img_src %>"
+                    alt="<%= service.home_img_alt %>"
+                    style="display:none;">
+                </div>
+                <div class="tm-portfolio-description">
+                  <h2 class="tm-text-blue">
+                    <%= service.home_title %>
+                    <a class="tm-title-small" href="<%= service.slug %>">More details</a>
+                  </h2>
+                  <%- service.home_page_html %>
+                </div>
               </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Drywall Repair and Patching
-                  <a class="tm-title-small" href="/service/drywall-repair-and-wall-patching-services-near-me">More details</a>
-                </h2>
-                <p class="mb-0">
-                  <span>Drywall Repair and Patching Services in Kingston Ontario</span>
-                  <!-- Added repeated and one-time keywords -->
-                  <div>Restore the look and integrity of your walls with our expert drywall patching near me and wall patching services. As leading wall patching services service company in Kingston, Ontario, we specialize in drywall patch repair service, fixing holes, cracks, and other damage to ensure your walls are as good as new. Our wall patching services experts deliver efficient and effective solutions, while our wall patching services service contractor ensures a seamless and long-lasting fix for both residential and commercial properties. Trust our wall patching services service for professional wall repair service near me that blends perfectly with your existing drywall.</div>
-                </p>
-              </div>
-            </div>
+            <% }); %>
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-blue"
-                aria-label="A large hole in drywall with visible water stains surrounding the damage, revealing the structural space behind the wall.">
-                <img src="/img/water.webp" alt="A large hole in drywall with visible water stains surrounding the damage, revealing the structural space behind the wall." style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Drywall Water Damage Repair Services
-                  <a class="tm-title-small" href="/service/drywall-water-damage-and-plaster-repair-services">More details</a>
-                </h2>
-                <p class="mb-0">
-                  <span>Drywall Water Damage Repair Services in Kingston Ontario</span>
-                  <!-- Added repeated and one-time keywords -->
-                  <div>Water damage can compromise the integrity and appearance of your drywall, leading to unsightly stains, bubbling, or even mold growth. At Drywall Kingston, we offer expert drywall repair services and plaster repair to restore your walls and ceilings to their original condition. Our drywall repair service identifies the source of the damage, removes compromised sections, and installs new drywall with a seamless finish. Whether it's a small patch or a complete wall replacement, our drywall companies ensure the repair blends perfectly with the rest of your interior. Serving Kingston, Ontario, we are committed to providing fast, reliable drywall restoration solutions that prevent further damage and keep your space safe and looking its best.</div>
-                </p>
-              </div>
-            </div>
-
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-blue"
-                aria-label="Applying textured finish to a drywall surface using a brush.">
-                <img src="/img/drywall-texturing.avif"
-                  alt="Applying textured finish to a drywall surface using a brush." style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Drywall Finishing and Texturing
-                  <a class="tm-title-small" href="/service/drywall-finishing-texturing-and-popcorn-ceiling-removal">More details</a>
-                </h2>
-                <p class="mb-0">
-                  <span>Professional Drywall Finishing and Texturing for a Perfect Finish</span>
-                  <!-- Added repeated and one-time keywords -->
-                  <div>Achieve a flawless and stylish look with our professional drywall services near me, including drywall finishing and texturing. From smooth finishes to intricate textures like popcorn ceiling removal, our skilled drywall contractor technicians can enhance the appearance of your walls and ceilings. Ideal for both residential and commercial properties, our finishing and texturing services add value and aesthetic appeal to any space. Choose from a variety of textures and finishes to match your design vision with Kingston Drywall.</div>
-                </p>
-              </div>
-            </div>
-
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-blue" aria-label="Partially finished drywall installation showing new drywall sheets and wooden framing around a doorway, with a vacuum cleaner nearby.">
-                <img src="/img/wall.webp" alt="Partially finished drywall installation showing new drywall sheets and wooden framing around a doorway, with a vacuum cleaner nearby." style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Partition Walls Installation
-                  <a class="tm-title-small" href="/service/partition-walls-installation-services">More details</a>
-                </h2>
-                <p class="mb-0">
-                  <span>Partition Walls Installation in Kingston, Ontario</span>
-                  <!-- Added repeated and one-time keywords -->
-                  <div>Partition walls play a critical role in defining interior spaces, providing structural separation, and enhancing privacy. Whether you're remodeling your home or office, partition wall installation can create functional layouts that meet your needs. At Drywall Kingston, our experienced drywall contractors specialize in installing drywall partitions for residential and commercial spaces across Kingston, Ontario. Our team ensures precision and durability, giving your walls a smooth finish that blends seamlessly with your interior design. Trust our drywalling services for expert wall repair service near me.</div>
-                </p>
-              </div>
-            </div>
-
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-blue" aria-label="An unfinished basement with exposed wooden framing, insulation, and scattered construction materials, indicating an ongoing renovation project.">
-                <img src="/img/basement.webp" alt="An unfinished basement with exposed wooden framing, insulation, and scattered construction materials, indicating an ongoing renovation project." style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Basement Renovation and Finishing Services
-                  <a class="tm-title-small" href="/service/basement-renovation-and-finishing-services">More details</a>
-                </h2>
-                <p class="mb-0">
-                  <span>Basement Renovation and Finishing Services in Kingston, Ontario</span>
-                  <!-- Added repeated and one-time keywords -->
-                  <div>Transform your basement into a functional and beautiful space with our professional basement renovation Kingston services. Whether you're adding extra bedrooms, a home office, or a recreational area, Drywall Kingston provides high-quality drywall services, including drywall and insulation contractors, to achieve the perfect finish. Serving homeowners across Kingston, Ontario, our drywall companies focus on maximizing the potential of your basement while enhancing the value of your property. From framing to the final coat of paint with painting and drywall repair near me, our team ensures every detail aligns with your vision.</div>
-                </p>
-              </div>
-            </div>
 
             <div class="tm-portfolio-item">
               <div class="tm-portfolio-name text-white tm-bg-blue"
