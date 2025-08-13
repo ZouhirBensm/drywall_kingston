@@ -180,15 +180,9 @@
                 <p class="mb-0">
                   <div>
                     <ul>
-                      <li><a href="/service/steel-stud-framing-services">Steel Stud Framing Services</a></li>
-                      <li><a href="/service/drywall-and-insulation-contractors">Drywall and Insulation Contractors</a></li>
-                      <li><a href="/service/suspended-t-bar-ceiling-services">Suspended T-Bar Ceiling Services</a></li>
-                      <li><a href="/service/textured-and-coffered-ceilings">Textured and Coffered Ceilings</a></li>
-                      <li><a href="/service/cove-moldings-and-bulkhead-services">Cove Moldings and Bulkhead Services</a></li>
-                      <li><a href="/service/painting-and-drywall-repair-near-me">Painting and Drywall Repair Near Me</a></li>
-                      <li><a href="/service/ceiling-drywall-repair-near-me">Ceiling Drywall Repair Near Me</a></li>
-                      <li><a href="/service/sheetrock-services-and-repair-near-me">Sheetrock Services and Repair Near Me</a></li>
-                      <li><a href="/service/industrial-drywall-services">Industrial Drywall Services</a></li>
+                      <% service_pages.forEach((service, index) => { %>
+                        <li><a href="/service/<%= service.slug %>"><%= service.title %></a></li>
+                      <% }); %>
                     </ul>
                   </div>
                 </p>

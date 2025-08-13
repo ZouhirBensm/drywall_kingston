@@ -144,7 +144,7 @@ app.get('/', async (req, res) => {
   }
 
 
-  console.log(drywall_kingston_home_page)
+  // console.log(drywall_kingston_home_page)
 
 
 
@@ -159,7 +159,7 @@ app.get('/', async (req, res) => {
   }
 
 
-  console.log(main_services)
+  // console.log(main_services)
 
 
   // Fetch the slugs from the blog_element table with the same category_id
@@ -201,7 +201,7 @@ app.get('/', async (req, res) => {
   }
 
   // console.log(blog_elements)
-  // console.log(service_pages)
+  console.log(service_pages)
 
   return res.render('index4', {
     blog_elements: blog_elements,
@@ -291,6 +291,18 @@ app.get('/service/basement-renovation-and-finishing-services', (req, res) => {
   return res.render('basement-renovation-and-finishing-services');
   // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
 });
+
+
+app.get('/service/contractor-ceiling-repair', (req, res) => {
+  return res.render('contractor-ceiling-repair');
+  // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
+});
+
+app.get('/service/sheetrock-services', (req, res) => {
+  return res.render('sheetrock-services');
+  // return res.sendFile('drywall-finishing-and-texturing.html', { root: 'public' });
+});
+
 
 
 

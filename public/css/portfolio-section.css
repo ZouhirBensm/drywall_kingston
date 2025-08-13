@@ -52,25 +52,35 @@ section#tmPortfolio .tm-portfolio-item:nth-of-type(6) .tm-portfolio-name {
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(7) .tm-portfolio-name {
+  background-image: url('../img/contractor_ceiling_repair.webp');
+}
+
+/* Select the third occurrence of the matched div */
+section#tmPortfolio .tm-portfolio-item:nth-of-type(8) .tm-portfolio-name {
+  background-image: url('../img/sheetrock_services.webp');
+}
+
+/* Select the third occurrence of the matched div */
+section#tmPortfolio .tm-portfolio-item:nth-of-type(9) .tm-portfolio-name {
   background-image: url('../img/drywall_more_services.avif');
 }
 
 
 /* Select the third occurrence of the matched div */
-section#tmPortfolio .tm-portfolio-item:nth-of-type(8) .tm-portfolio-name {
+section#tmPortfolio .tm-portfolio-item:nth-of-type(10) .tm-portfolio-name {
   background-image: url('../img/drywall_industry_overview.avif');
 }
 
 
 
 /* Select the third occurrence of the matched div */
-section#tmPortfolio .tm-portfolio-item:nth-of-type(9) .tm-portfolio-name {
+section#tmPortfolio .tm-portfolio-item:nth-of-type(11) .tm-portfolio-name {
   background-image: url('../img/benefits_of_professional_drywall_services.avif');
 }
 
 
 /* Select the third occurrence of the matched div */
-section#tmPortfolio .tm-portfolio-item:nth-of-type(10) .tm-portfolio-name {
+section#tmPortfolio .tm-portfolio-item:nth-of-type(12) .tm-portfolio-name {
   background-image: url('../img/future_trends_in_the_drywall_industry.avif');
 }
 
