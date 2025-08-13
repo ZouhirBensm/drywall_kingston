@@ -69,6 +69,31 @@ const data_error_handler_controller = require('./lifecycle/controller/error-cont
 
 
 
+
+// Redirect mappings for old URLs to new URLs
+const redirect_map = {
+  '/service/drywall-installation-service': '/service/drywall-installation-services',
+  '/service/drywall-repair-and-patching-services': '/service/drywall-repair-and-wall-patching-services-near-me',
+  '/service/drywall-water-damage-repair': '/service/drywall-water-damage-and-plaster-repair-services',
+  '/service/drywall-finishing-and-texturing-service': '/service/drywall-finishing-texturing-and-popcorn-ceiling-removal',
+  '/service/partition-walls-installation': '/service/partition-walls-installation-services',
+  '/service/basement-rennovation-and-finishing-services': '/service/basement-renovation-and-finishing-services',
+  '/service/steel-stud-framing': '/service/steel-stud-framing-services',
+  '/service/blown-and-batt-insulation': '/service/drywall-and-insulation-contractors',
+  '/service/suspended-t-bar-ceilings': '/service/suspended-t-bar-ceiling-services',
+  '/service/textured-and-coffered-ceilings': '/service/ceiling-drywall-repair-near-me',
+  '/service/cove-moldings-and-bulkheads': '/service/cove-moldings-and-bulkhead-services',
+  '/service/spray-priming-and-painting': '/service/painting-and-drywall-repair-near-me'
+};
+
+// Implement 301 redirects for the mapped URLs
+Object.keys(redirect_map).forEach(old_url => {
+  app.get(old_url, (req, res) => {
+    res.status(301).redirect(redirect_map[old_url]);
+  });
+});
+
+
 // For SEO Keep until google identifies that the pages are gone
 const goneUrls = [
   "/blog/drywall/blog-posting/Article1",
