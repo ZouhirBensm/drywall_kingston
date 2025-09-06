@@ -23,7 +23,11 @@ body>footer>div>div#social-media>a[href='https://www.linkedin.com/company/drywal
 }
 
 
-body>footer>div>div#social-media>a[href='mailto:drywallkingston@outlook.com']>img:hover {
+/* body>footer>div>div#social-media>a[href='mailto:drywallkingston@outlook.com']>img:hover {
+  content: url('../img/icons/email_red.svg');
+} */
+
+body>footer>div>div#social-media>a#email>img:hover {
   content: url('../img/icons/email_red.svg');
 }
 
@@ -55,7 +59,12 @@ body>footer>div>div#social-media>a[href='https://www.linkedin.com/company/drywal
 }
 
 
-body>footer>div>div#social-media>a[href='mailto:drywallkingston@outlook.com']>img {
+/* body>footer>div>div#social-media>a[href='mailto:drywallkingston@outlook.com']>img {
+  height: 44px;
+  width: 44px
+} */
+
+body>footer>div>div#social-media>a#email>img {
   height: 44px;
   width: 44px
 }

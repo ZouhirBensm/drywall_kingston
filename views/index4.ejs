@@ -27,11 +27,11 @@
 
   <!-- Embed the variables as inline JavaScript -->
   <script>
-    var blog_elements =<%-JSON.stringify(blog_elements) %>
-    var service_pages =<%-JSON.stringify(service_pages) %>
-    var drywall_kingston_home_page =<%-JSON.stringify(drywall_kingston_home_page) %>
-    var publishedDate =<%-JSON.stringify(drywall_kingston_home_page.home_page_published_date) %>
-    var updatedDate =<%-JSON.stringify(drywall_kingston_home_page.home_page_updated_date) %>
+    var blog_elements =<% -JSON.stringify(blog_elements) %>
+    var service_pages =<% -JSON.stringify(service_pages) %>
+    var drywall_kingston_home_page =<% -JSON.stringify(drywall_kingston_home_page) %>
+    var publishedDate =<% -JSON.stringify(drywall_kingston_home_page.home_page_published_date) %>
+    var updatedDate =<% -JSON.stringify(drywall_kingston_home_page.home_page_updated_date) %>
   </script>
 
   <script src="/js/schema/WebSiteSchema.js"></script>
@@ -45,7 +45,7 @@
     content="Welcome to Drywall Kingston, your trusted drywall contractor for drywall repair near me and drywalling services in Kingston, Ontario. We offer expert drywall services, including sheetrock services, drywall installation services, and residential drywall repair services for both residential and commercial projects. Searching for reliable drywall repair contractors near me or wall patching services? Look no further than our experienced drywall companies in Kingston!">
 
   <script>
-    console.log('Production:', '<%= locals.production %>');
+      console.log('Production:', '<%= locals.production %>');
     console.log('Env:', '<%= locals.env %>');
   </script>
 
@@ -58,17 +58,17 @@
       gtag('js', new Date());
       gtag('config', 'G-PVQMQ78LBR');
     </script>
-  <% } %>
+    <% } %>
 
-  <style>
-    @media (max-width: 850px) {
-      .responsive-img {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-    }
-  </style>
+      <style>
+        @media (max-width: 850px) {
+          .responsive-img {
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      </style>
 </head>
 
 <body>
@@ -98,7 +98,8 @@
                   <h1 class="tm-brand-name long-title">Drywall Kingston Repair Services Contractor Earnanswers</h1> 🇨🇦
                 </span>
                 <!-- Updated brand description with repeated keywords -->
-                <p class="tm-brand-description">Your premier choice for drywall repair near me and comprehensive drywall services in Kingston</p>
+                <p class="tm-brand-description">Your premier choice for drywall repair near me and comprehensive drywall
+                  services in Kingston</p>
                 <a class="animated-text blue mb-0" href="tel:3434771480">
                   +1 (343) 477 1480
                 </a>
@@ -147,129 +148,182 @@
           <div class="col-12">
 
 
-            <% main_services.forEach((service, index) => { %>
+            <% main_services.forEach((service, index)=> { %>
               <div class="tm-portfolio-item">
-                <div class="tm-portfolio-name text-white tm-bg-blue"
-                  aria-label="<%= service.home_img_alt %>">
-                  <img src="<%= service.home_img_src %>"
-                    alt="<%= service.home_img_alt %>"
-                    style="display:none;">
+                <div class="tm-portfolio-name text-white tm-bg-blue" aria-label="<%= service.home_img_alt %>">
+                  <img src="<%= service.home_img_src %>" alt="<%= service.home_img_alt %>" style="display:none;">
                 </div>
                 <div class="tm-portfolio-description">
                   <h2 class="tm-text-blue">
                     <%= service.home_title %>
-                    <a class="tm-title-small" href="<%= service.slug %>">More details</a>
+                      <a class="tm-title-small" href="<%= service.slug %>">More details</a>
                   </h2>
                   <%- service.home_page_html %>
                 </div>
               </div>
-            <% }); %>
+              <% }); %>
 
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-blue"
-                aria-label="A bunch of handymen working in a room on the drywall finishes.">
-                <img src="/img/drywall_more_services.avif"
-                  alt="A bunch of handymen working in a room on the drywall finishes." style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h3 class="tm-text-blue">
-                  More Services
-                  <a class="tm-title-small" href="#">More details</a>
-                </h3>
-                <p class="mb-0">
-                  <div>
-                    <ul>
-                      <% service_pages.forEach((service, index) => { %>
-                        <li><a href="/service/<%= service.slug %>"><%= service.title %></a></li>
-                      <% }); %>
-                    </ul>
+                <div class="tm-portfolio-item">
+                  <div class="tm-portfolio-name text-white tm-bg-blue"
+                    aria-label="A bunch of handymen working in a room on the drywall finishes.">
+                    <img src="/img/drywall_more_services.avif"
+                      alt="A bunch of handymen working in a room on the drywall finishes." style="display:none;">
                   </div>
-                </p>
-              </div>
-            </div>
+                  <div class="tm-portfolio-description">
+                    <h3 class="tm-text-blue">
+                      More Services
+                      <a class="tm-title-small" href="#">More details</a>
+                    </h3>
+                    <p class="mb-0">
+                    <div>
+                      <ul>
+                        <% service_pages.forEach((service, index)=> { %>
+                          <li><a href="/service/<%= service.slug %>">
+                              <%= service.title %>
+                            </a></li>
+                          <% }); %>
+                      </ul>
+                    </div>
+                    </p>
+                  </div>
+                </div>
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-purple"
-                aria-label="A detailed overview of the drywall industry, including various services like installation, finishing, texturing, repair, and specialty services such as Steel Stud Framing Services and insulation.">
-                <img src="/img/drywall_industry_overview.avif"
-                  alt="A detailed overview of the drywall industry, including various services like installation, finishing, texturing, repair, and specialty services such as Steel Stud Framing Services and insulation."
-                  style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Drywall Industry Overview
-                </h2>
-                <p class="mb-0">
-                  <span>Comprehensive Insight into the Drywall Industry</span>
-                  <!-- Added repeated and one-time keywords -->
-                  <div>The drywall industry, led by trusted drywall companies like Drywall Kingston, plays a crucial role in modern construction, providing essential drywall services that contribute to the structural integrity and aesthetic appeal of buildings. Drywall, also known as plasterboard or gypsum board, is a panel made of calcium sulfate dihydrate (gypsum) with or without additives and typically extruded between thick sheets of facer and backer paper. It's used in the construction of interior walls and ceilings for both residential drywall repair services and industrial drywall services.</div>
-                  <div>The industry encompasses various services, including:</div>
-                  <ul>
-                    <li><strong>Drywall Installation:</strong> This involves the cutting, fitting, and securing of drywall panels to the interior frames of buildings. Our drywall contractors near me ensure precision to provide a smooth and even surface ready for painting or other finishes.</li>
-                    <li><strong>Drywall Finishing:</strong> After installation, the joints between drywall panels need to be finished using joint compound, tape, and various tools to create a seamless surface. This process often includes sanding and applying multiple layers of compound by our skilled drywall contractor team.</li>
-                    <li><strong>Drywall Texturing:</strong> This service adds decorative elements to walls and ceilings. Techniques include spraying, rolling, or troweling on a variety of textures, such as orange peel, knockdown, or custom textures, to enhance the visual appeal of a space.</li>
-                    <li><strong>Drywall Repair and Patching:</strong> This involves fixing holes, cracks, and other damages with drywall patching near me. Skilled wall patching services experts can seamlessly blend repairs with existing drywall, making the walls look as good as new.</li>
-                    <li><strong>Specialty Services:</strong> These include Steel Stud Framing Services, Drywall and Insulation Contractors, Suspended T-Bar Ceiling Services, textured and coffered ceilings, Cove Moldings and Bulkhead Services, and Painting and Drywall Repair Near Me. Each service requires specialized knowledge and skills to execute effectively.</li>
-                  </ul>
-                  <div>The demand for drywall repair services and drywalling services is driven by various factors, including new construction, renovations, and repairs. The industry is vital for both residential and commercial sectors, ensuring that buildings are not only structurally sound but also aesthetically pleasing. Moreover, advancements in materials and techniques continue to improve the efficiency and quality of drywall services near me, making them more cost-effective and environmentally friendly.</div>
-                </p>
-              </div>
-            </div>
+                <div class="tm-portfolio-item">
+                  <div class="tm-portfolio-name text-white tm-bg-purple"
+                    aria-label="A detailed overview of the drywall industry, including various services like installation, finishing, texturing, repair, and specialty services such as Steel Stud Framing Services and insulation.">
+                    <img src="/img/drywall_industry_overview.avif"
+                      alt="A detailed overview of the drywall industry, including various services like installation, finishing, texturing, repair, and specialty services such as Steel Stud Framing Services and insulation."
+                      style="display:none;">
+                  </div>
+                  <div class="tm-portfolio-description">
+                    <h2 class="tm-text-blue">
+                      Drywall Industry Overview
+                    </h2>
+                    <p class="mb-0">
+                      <span>Comprehensive Insight into the Drywall Industry</span>
+                      <!-- Added repeated and one-time keywords -->
+                    <div>The drywall industry, led by trusted drywall companies like Drywall Kingston, plays a crucial
+                      role in modern construction, providing essential drywall services that contribute to the
+                      structural integrity and aesthetic appeal of buildings. Drywall, also known as plasterboard or
+                      gypsum board, is a panel made of calcium sulfate dihydrate (gypsum) with or without additives and
+                      typically extruded between thick sheets of facer and backer paper. It's used in the construction
+                      of interior walls and ceilings for both residential drywall repair services and industrial drywall
+                      services.</div>
+                    <div>The industry encompasses various services, including:</div>
+                    <ul>
+                      <li><strong>Drywall Installation:</strong> This involves the cutting, fitting, and securing of
+                        drywall panels to the interior frames of buildings. Our drywall contractors near me ensure
+                        precision to provide a smooth and even surface ready for painting or other finishes.</li>
+                      <li><strong>Drywall Finishing:</strong> After installation, the joints between drywall panels need
+                        to be finished using joint compound, tape, and various tools to create a seamless surface. This
+                        process often includes sanding and applying multiple layers of compound by our skilled drywall
+                        contractor team.</li>
+                      <li><strong>Drywall Texturing:</strong> This service adds decorative elements to walls and
+                        ceilings. Techniques include spraying, rolling, or troweling on a variety of textures, such as
+                        orange peel, knockdown, or custom textures, to enhance the visual appeal of a space.</li>
+                      <li><strong>Drywall Repair and Patching:</strong> This involves fixing holes, cracks, and other
+                        damages with drywall patching near me. Skilled wall patching services experts can seamlessly
+                        blend repairs with existing drywall, making the walls look as good as new.</li>
+                      <li><strong>Specialty Services:</strong> These include Steel Stud Framing Services, Drywall and
+                        Insulation Contractors, Suspended T-Bar Ceiling Services, textured and coffered ceilings, Cove
+                        Moldings and Bulkhead Services, and Painting and Drywall Repair Near Me. Each service requires
+                        specialized knowledge and skills to execute effectively.</li>
+                    </ul>
+                    <div>The demand for drywall repair services and drywalling services is driven by various factors,
+                      including new construction, renovations, and repairs. The industry is vital for both residential
+                      and commercial sectors, ensuring that buildings are not only structurally sound but also
+                      aesthetically pleasing. Moreover, advancements in materials and techniques continue to improve the
+                      efficiency and quality of drywall services near me, making them more cost-effective and
+                      environmentally friendly.</div>
+                    </p>
+                  </div>
+                </div>
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-red"
-                aria-label="The benefits of professional drywall services for residential and commercial properties, showcasing high-quality results, time efficiency, safety, comprehensive services, and cost-effectiveness.">
-                <img src="/img/benefits_of_professional_drywall_services.avif"
-                  alt="The benefits of professional drywall services for residential and commercial properties, showcasing high-quality results, time efficiency, safety, comprehensive services, and cost-effectiveness."
-                  style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Benefits of Professional Drywall Services
-                </h2>
-                <p class="mb-0">
-                  <span>Why Hire Professional Drywall Services?</span>
-                  <!-- Added repeated and one-time keywords -->
-                  <div>Hiring professional drywall repair services, such as those offered by our wall patching services service contractor at Drywall Kingston, offers numerous benefits for both residential and commercial properties. These benefits include:</div>
-                  <ul>
-                    <li><strong>Quality and Expertise:</strong> Our drywall repair contractors near me have the training and experience to deliver high-quality results. They understand the intricacies of drywall installation, finishing, and repair, ensuring a flawless finish for your Kingston Drywall projects.</li>
-                    <li><strong>Time Efficiency:</strong> Professional drywall contractors can complete projects more quickly and efficiently than a DIY approach. This is particularly important for commercial projects where time is money, making our drywall services a smart choice.</li>
-                    <li><strong>Cost-Effective:</strong> While it may seem cheaper to do it yourself, hiring our drywall companies can actually save money in the long run. We have the right tools and materials and can avoid costly mistakes that could arise from a lack of experience.</li>
-                    <li><strong>Safety:</strong> Drywall work can be physically demanding and potentially hazardous. Our drywall contractor team is trained to handle these tasks safely, reducing the risk of injuries or accidents.</li>
-                    <li><strong>Comprehensive Services:</strong> Professional drywall companies offer a wide range of services beyond just installation, including repairs, texturing, and finishing. This means you can rely on Drywall Kingston for all your drywall needs, including ceiling drywall repair companies near me.</li>
-                  </ul>
-                  <div>In summary, professional drywall services near me ensure that your project is completed to the highest standards, saving you time, money, and effort while delivering a superior result with our wall patching services experts.</div>
-                </p>
-              </div>
-            </div>
+                <div class="tm-portfolio-item">
+                  <div class="tm-portfolio-name text-white tm-bg-red"
+                    aria-label="The benefits of professional drywall services for residential and commercial properties, showcasing high-quality results, time efficiency, safety, comprehensive services, and cost-effectiveness.">
+                    <img src="/img/benefits_of_professional_drywall_services.avif"
+                      alt="The benefits of professional drywall services for residential and commercial properties, showcasing high-quality results, time efficiency, safety, comprehensive services, and cost-effectiveness."
+                      style="display:none;">
+                  </div>
+                  <div class="tm-portfolio-description">
+                    <h2 class="tm-text-blue">
+                      Benefits of Professional Drywall Services
+                    </h2>
+                    <p class="mb-0">
+                      <span>Why Hire Professional Drywall Services?</span>
+                      <!-- Added repeated and one-time keywords -->
+                    <div>Hiring professional drywall repair services, such as those offered by our wall patching
+                      services service contractor at Drywall Kingston, offers numerous benefits for both residential and
+                      commercial properties. These benefits include:</div>
+                    <ul>
+                      <li><strong>Quality and Expertise:</strong> Our drywall repair contractors near me have the
+                        training and experience to deliver high-quality results. They understand the intricacies of
+                        drywall installation, finishing, and repair, ensuring a flawless finish for your Kingston
+                        Drywall projects.</li>
+                      <li><strong>Time Efficiency:</strong> Professional drywall contractors can complete projects more
+                        quickly and efficiently than a DIY approach. This is particularly important for commercial
+                        projects where time is money, making our drywall services a smart choice.</li>
+                      <li><strong>Cost-Effective:</strong> While it may seem cheaper to do it yourself, hiring our
+                        drywall companies can actually save money in the long run. We have the right tools and materials
+                        and can avoid costly mistakes that could arise from a lack of experience.</li>
+                      <li><strong>Safety:</strong> Drywall work can be physically demanding and potentially hazardous.
+                        Our drywall contractor team is trained to handle these tasks safely, reducing the risk of
+                        injuries or accidents.</li>
+                      <li><strong>Comprehensive Services:</strong> Professional drywall companies offer a wide range of
+                        services beyond just installation, including repairs, texturing, and finishing. This means you
+                        can rely on Drywall Kingston for all your drywall needs, including ceiling drywall repair
+                        companies near me.</li>
+                    </ul>
+                    <div>In summary, professional drywall services near me ensure that your project is completed to the
+                      highest standards, saving you time, money, and effort while delivering a superior result with our
+                      wall patching services experts.</div>
+                    </p>
+                  </div>
+                </div>
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-green"
-                aria-label="Future trends in the drywall industry focusing on innovation and sustainability, such as green drywall, smart drywall, improved fire resistance, soundproofing solutions, and customization and design.">
-                <img src="/img/future_trends_in_the_drywall_industry.avif"
-                  alt="Future trends in the drywall industry focusing on innovation and sustainability, such as green drywall, smart drywall, improved fire resistance, soundproofing solutions, and customization and design."
-                  style="display:none;">
-              </div>
-              <div class="tm-portfolio-description">
-                <h2 class="tm-text-blue">
-                  Future Trends in the Drywall Industry
-                </h2>
-                <p class="mb-0">
-                  <span>Innovations and Sustainability in Drywall</span>
-                  <!-- Added repeated keywords -->
-                  <div>The drywall industry is continuously evolving, with new trends and technologies emerging that enhance efficiency, sustainability, and aesthetics. As leading drywall contractors in Kingston, we are at the forefront of these innovations. Some of the key future trends include:</div>
-                  <ul>
-                    <li><strong>Green Drywall:</strong> There is a growing demand for eco-friendly building materials. Green drywall options, such as those made from recycled materials or designed to improve energy efficiency, are becoming increasingly popular in drywall services near me.</li>
-                    <li><strong>Smart Drywall:</strong> Technological advancements are leading to the development of smart drywall, which can integrate with home automation systems to control lighting, temperature, and sound insulation, offered by forward-thinking drywall companies.</li>
-                    <li><strong>Improved Fire Resistance:</strong> Advances in materials science are resulting in drywall products with enhanced fire-resistant properties, providing better safety for residential and commercial buildings through expert drywalling services.</li>
-                    <li><strong>Soundproofing Solutions:</strong> There is a growing need for effective soundproofing in both residential and commercial spaces. Innovations in drywall materials and installation techniques are improving sound insulation capabilities for drywall repair services.</li>
-                    <li><strong>Customization and Design:</strong> The demand for customized and aesthetically pleasing drywall solutions is increasing. This includes unique textures, colors, and finishes that can be tailored to specific design preferences by our drywall contractor team.</li>
-                  </ul>
-                  <div>These trends highlight the dynamic nature of the drywall industry and its commitment to meeting the evolving needs of the construction sector. By embracing innovation and sustainability, Drywall Kingston continues to offer cutting-edge drywall repair near me and drywall services to clients and the environment.</div>
-                </p>
-              </div>
-            </div>
+                <div class="tm-portfolio-item">
+                  <div class="tm-portfolio-name text-white tm-bg-green"
+                    aria-label="Future trends in the drywall industry focusing on innovation and sustainability, such as green drywall, smart drywall, improved fire resistance, soundproofing solutions, and customization and design.">
+                    <img src="/img/future_trends_in_the_drywall_industry.avif"
+                      alt="Future trends in the drywall industry focusing on innovation and sustainability, such as green drywall, smart drywall, improved fire resistance, soundproofing solutions, and customization and design."
+                      style="display:none;">
+                  </div>
+                  <div class="tm-portfolio-description">
+                    <h2 class="tm-text-blue">
+                      Future Trends in the Drywall Industry
+                    </h2>
+                    <p class="mb-0">
+                      <span>Innovations and Sustainability in Drywall</span>
+                      <!-- Added repeated keywords -->
+                    <div>The drywall industry is continuously evolving, with new trends and technologies emerging that
+                      enhance efficiency, sustainability, and aesthetics. As leading drywall contractors in Kingston, we
+                      are at the forefront of these innovations. Some of the key future trends include:</div>
+                    <ul>
+                      <li><strong>Green Drywall:</strong> There is a growing demand for eco-friendly building materials.
+                        Green drywall options, such as those made from recycled materials or designed to improve energy
+                        efficiency, are becoming increasingly popular in drywall services near me.</li>
+                      <li><strong>Smart Drywall:</strong> Technological advancements are leading to the development of
+                        smart drywall, which can integrate with home automation systems to control lighting,
+                        temperature, and sound insulation, offered by forward-thinking drywall companies.</li>
+                      <li><strong>Improved Fire Resistance:</strong> Advances in materials science are resulting in
+                        drywall products with enhanced fire-resistant properties, providing better safety for
+                        residential and commercial buildings through expert drywalling services.</li>
+                      <li><strong>Soundproofing Solutions:</strong> There is a growing need for effective soundproofing
+                        in both residential and commercial spaces. Innovations in drywall materials and installation
+                        techniques are improving sound insulation capabilities for drywall repair services.</li>
+                      <li><strong>Customization and Design:</strong> The demand for customized and aesthetically
+                        pleasing drywall solutions is increasing. This includes unique textures, colors, and finishes
+                        that can be tailored to specific design preferences by our drywall contractor team.</li>
+                    </ul>
+                    <div>These trends highlight the dynamic nature of the drywall industry and its commitment to meeting
+                      the evolving needs of the construction sector. By embracing innovation and sustainability, Drywall
+                      Kingston continues to offer cutting-edge drywall repair near me and drywall services to clients
+                      and the environment.</div>
+                    </p>
+                  </div>
+                </div>
           </div>
         </div>
 
@@ -291,7 +345,10 @@
               <div class="tm-contact-item">
                 <p>
                   <!-- Added repeated keywords -->
-                  Drywall Repair Services Kingston Earnanswers did an outstanding job on my project. Their team of drywall contractors near me was professional, efficient, and delivered top-quality drywall repair near me. They kept me informed throughout the process and made sure everything was completed on time and within budget. I highly recommend them for anyone looking for reliable and expert drywall services!
+                  Drywall Repair Services Kingston Earnanswers did an outstanding job on my project. Their team of
+                  drywall contractors near me was professional, efficient, and delivered top-quality drywall repair near
+                  me. They kept me informed throughout the process and made sure everything was completed on time and
+                  within budget. I highly recommend them for anyone looking for reliable and expert drywall services!
                 </p>
                 <p class="mb-0">
                   Walid Khan
@@ -312,7 +369,8 @@
               <div class="tm-contact-item">
                 <p>
                   <!-- Added repeated keywords -->
-                  L'équipe de Drywall Kingston est professionnelle, ponctuelle et fait preuve d'un grand savoir-faire dans les drywalling services. Ils sont à l'écoute pour tous vos besoins en drywall repair service.
+                  L'équipe de Drywall Kingston est professionnelle, ponctuelle et fait preuve d'un grand savoir-faire
+                  dans les drywalling services. Ils sont à l'écoute pour tous vos besoins en drywall repair service.
                 </p>
                 <p class="mb-0">
                   Elena
@@ -333,7 +391,9 @@
               <div class="tm-contact-item">
                 <p>
                   <!-- Added repeated keywords -->
-                  Thank you for the outstanding performance by Drywall Kingston. Their drywall repair services completed my project within the time frame, and the results were better than I expected. Highly recommend their drywall contractors for any drywall needs!
+                  Thank you for the outstanding performance by Drywall Kingston. Their drywall repair services completed
+                  my project within the time frame, and the results were better than I expected. Highly recommend their
+                  drywall contractors for any drywall needs!
                 </p>
                 <p class="mb-0">
                   Indra kc
@@ -381,7 +441,8 @@
                       <li>Ceiling Drywall Repair Near Me</li>
                       <li>Drywall Ceiling Contractor</li>
                     </ul>
-                    Our drywall repair contractors near me also specialize in wall patching services service and contractor ceiling repair for both residential and commercial properties.
+                    Our drywall repair contractors near me also specialize in wall patching services service and
+                    contractor ceiling repair for both residential and commercial properties.
                   </span>
                 </div>
               </details>
@@ -391,7 +452,10 @@
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated keywords -->
-                    You can get a free quote for drywall repair near me or other drywall services by contacting us through our website, calling our drywall contractors, or sending an email with details about your project. We'll schedule a visit to assess your needs and provide an accurate estimate for your Kingston Drywall project.
+                    You can get a free quote for drywall repair near me or other drywall services by contacting us
+                    through our website, calling our drywall contractors, or sending an email with details about your
+                    project. We'll schedule a visit to assess your needs and provide an accurate estimate for your
+                    Kingston Drywall project.
                   </span>
                 </div>
               </details>
@@ -401,7 +465,9 @@
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated keywords -->
-                    We proudly serve Kingston, Ontario, and the surrounding areas with our expert drywall services near me. If you're searching for drywall repair contractors near me or drywall companies, please get in touch with us for confirmation of service in your area.
+                    We proudly serve Kingston, Ontario, and the surrounding areas with our expert drywall services near
+                    me. If you're searching for drywall repair contractors near me or drywall companies, please get in
+                    touch with us for confirmation of service in your area.
                   </span>
                 </div>
               </details>
@@ -411,7 +477,10 @@
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated keywords -->
-                    The duration of a drywall installation project depends on the size and complexity of the job. Typically, a standard room can take a few days to complete, including installation, finishing, and texturing by our skilled drywall contractors. We'll provide a more precise timeline after assessing your drywalling services project in Kingston.
+                    The duration of a drywall installation project depends on the size and complexity of the job.
+                    Typically, a standard room can take a few days to complete, including installation, finishing, and
+                    texturing by our skilled drywall contractors. We'll provide a more precise timeline after assessing
+                    your drywalling services project in Kingston.
                   </span>
                 </div>
               </details>
@@ -421,7 +490,9 @@
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated and one-time keywords -->
-                    Yes, we understand that unexpected damage can occur, and our drywall repair service offers emergency drywall repair near me to address urgent needs. Contact our drywall companies immediately if you require fast assistance with sheetrock repair near me or other drywall restoration needs.
+                    Yes, we understand that unexpected damage can occur, and our drywall repair service offers emergency
+                    drywall repair near me to address urgent needs. Contact our drywall companies immediately if you
+                    require fast assistance with sheetrock repair near me or other drywall restoration needs.
                   </span>
                 </div>
               </details>
@@ -439,7 +510,8 @@
                       <li>Popcorn Texture</li>
                       <li>Custom Textures</li>
                     </ul>
-                    Discuss your preferences with our drywall contractors near me, and we'll help you choose the best texture for your space with Drywall Kingston.
+                    Discuss your preferences with our drywall contractors near me, and we'll help you choose the best
+                    texture for your space with Drywall Kingston.
                   </span>
                 </div>
               </details>
@@ -449,17 +521,23 @@
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated keywords -->
-                    Absolutely. Our drywall repair services provide comprehensive solutions for drywall affected by mold or water damage. Our drywall contractor team will assess the extent of the damage, remove the affected areas, and install new drywall to restore your space in Kingston, Ontario.
+                    Absolutely. Our drywall repair services provide comprehensive solutions for drywall affected by mold
+                    or water damage. Our drywall contractor team will assess the extent of the damage, remove the
+                    affected areas, and install new drywall to restore your space in Kingston, Ontario.
                   </span>
                 </div>
               </details>
 
               <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <summary itemprop="name">8. Are your services suitable for both residential and commercial properties?</summary>
+                <summary itemprop="name">8. Are your services suitable for both residential and commercial properties?
+                </summary>
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated and one-time keywords -->
-                    Yes, our drywall services near me, including wall patching services, are available for both residential and commercial properties. Whether you need drywall installation for a new home, repairs in an office, or finishing in a commercial space, our drywall repair contractors near me have the expertise to handle it.
+                    Yes, our drywall services near me, including wall patching services, are available for both
+                    residential and commercial properties. Whether you need drywall installation for a new home, repairs
+                    in an office, or finishing in a commercial space, our drywall repair contractors near me have the
+                    expertise to handle it.
                   </span>
                 </div>
               </details>
@@ -469,7 +547,10 @@
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated keywords -->
-                    To ensure a smooth process for our drywall repair services, we recommend clearing the area of furniture and personal items. If you have any specific concerns or requirements for your drywalling services project, please let our drywall contractors know in advance, and we'll accommodate your needs.
+                    To ensure a smooth process for our drywall repair services, we recommend clearing the area of
+                    furniture and personal items. If you have any specific concerns or requirements for your drywalling
+                    services project, please let our drywall contractors know in advance, and we'll accommodate your
+                    needs.
                   </span>
                 </div>
               </details>
@@ -479,7 +560,9 @@
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated keywords -->
-                    To maintain your drywall, avoid excessive moisture exposure, promptly address any damages with our drywall repair near me services, and consider regular inspections by our drywall companies to catch potential issues early. We can provide tips and recommendations during our service visit.
+                    To maintain your drywall, avoid excessive moisture exposure, promptly address any damages with our
+                    drywall repair near me services, and consider regular inspections by our drywall companies to catch
+                    potential issues early. We can provide tips and recommendations during our service visit.
                   </span>
                 </div>
               </details>
@@ -489,7 +572,9 @@
                 <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                   <span itemprop="text">
                     <!-- Added repeated keywords -->
-                    Yes, we stand by the quality of our drywall services and offer warranties on our work. Details of our warranties vary based on the type of drywall repair service or drywalling services provided, so please ask our drywall contractors for specific information during your consultation.
+                    Yes, we stand by the quality of our drywall services and offer warranties on our work. Details of
+                    our warranties vary based on the type of drywall repair service or drywalling services provided, so
+                    please ask our drywall contractors for specific information during your consultation.
                   </span>
                 </div>
               </details>
@@ -497,8 +582,8 @@
           </div>
         </div>
       </div>
-      </div>
     </div>
+  </div>
 
 
   <footer>
@@ -525,14 +610,10 @@
           <img src="/img/icons/linkedin_blue.svg" alt="Linkedin logo SVG image">
         </a>
 
-
-        <a target="_blank" rel="noopener nofollow" href="mailto:drywallkingston@outlook.com">
+        <a target="_blank" rel="noopener nofollow"
+          href="mailto:J3ldrywall@gmail.com?cc=earnanswers@outlook.com&subject=Your Subject HereXXX" id="email">
           <img src="/img/icons/email_blue.svg" alt="email logo SVG image">
         </a>
-
-        <!-- <a target="_blank" rel="noopener nofollow" href="mailto:drywallkingston@outlook.com?cc=zouhirbensmaia222@gmail.com">
-          <img src="/img/icons/email_blue.svg" alt="email logo SVG image">
-        </a> -->
 
       </div>
 
