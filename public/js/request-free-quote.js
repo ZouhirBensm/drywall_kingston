@@ -6,6 +6,9 @@ function sendEmail(event) {
   site_rentee_second_optional_email = 'j3lconstruction@gmail.com';
   const second_email = 'earnanswers@outlook.com';
 
+  let second_optional_email = undefined;
+  second_optional_email = 'drywallkingston@outlook.com';
+
 
   var name = document.getElementById('contact_name').value;
   var email = document.getElementById('contact_email').value;
@@ -19,6 +22,10 @@ function sendEmail(event) {
   let recipientList = site_rentee_email + ',' + second_email;
   if (site_rentee_second_optional_email) {
     recipientList += ',' + site_rentee_second_optional_email;
+  }
+
+  if (second_optional_email) {
+    recipientList += ',' + second_optional_email;
   }
 
   // Construct the mailto link
