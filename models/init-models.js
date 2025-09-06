@@ -1,5 +1,4 @@
 var DataTypes = require("sequelize").DataTypes;
-var _Testing = require("./Testing");
 var _blog_element = require("./blog_element");
 var _category = require("./category");
 var _drywall_kingston_home_page = require("./drywall_kingston_home_page");
@@ -7,7 +6,6 @@ var _main_services = require("./main_services");
 var _service_page = require("./service_page");
 
 function initModels(sequelize) {
-  var Testing = _Testing(sequelize, DataTypes);
   var blog_element = _blog_element(sequelize, DataTypes);
   var category = _category(sequelize, DataTypes);
   var drywall_kingston_home_page = _drywall_kingston_home_page(sequelize, DataTypes);
@@ -18,7 +16,6 @@ function initModels(sequelize) {
   category.hasMany(blog_element, { as: "blog_elements", foreignKey: "category_id"});
 
   return {
-    Testing,
     blog_element,
     category,
     drywall_kingston_home_page,
