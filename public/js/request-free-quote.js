@@ -1,13 +1,13 @@
 function sendEmail(event) {
   event.preventDefault();
 
-  const site_rentee_email = 'J3ldrywall@gmail.com';
-  let site_rentee_second_optional_email = undefined;
-  site_rentee_second_optional_email = 'j3lconstruction@gmail.com';
-  const second_email = 'earnanswers@outlook.com';
-
-  let second_optional_email = undefined;
-  second_optional_email = 'drywallkingston@outlook.com';
+  const email_1 = 'drywallkingston@outlook.com'; // mailto
+  const email_2 = 'J3ldrywall@gmail.com'; // cc
+  
+  let optional_email_3 = undefined;
+  optional_email_3 = 'j3lconstruction@gmail.com'; // cc
+  let optional_email_4 = undefined;
+  // optional_email_4 = 'earnanswers@outlook.com';
 
 
   var name = document.getElementById('contact_name').value;
@@ -19,18 +19,21 @@ function sendEmail(event) {
   // console.log(phone, message)
 
   // Build the recipient list
-  let recipientList = site_rentee_email + ',' + second_email;
-  if (site_rentee_second_optional_email) {
-    recipientList += ',' + site_rentee_second_optional_email;
+  let recipientList = email_1;  
+  let ccList = email_2;
+
+  if (optional_email_3) {
+    ccList += ',' + optional_email_3;
   }
 
-  if (second_optional_email) {
-    recipientList += ',' + second_optional_email;
+  if (optional_email_4) {
+    ccList += ',' + optional_email_4;
   }
 
   // Construct the mailto link
   var mailtoLink = 'mailto:' + recipientList +
-    '?subject=' + encodeURIComponent('Drywall Kingston: Quote Request') +
+    '?cc=' + encodeURIComponent(ccList) +
+    '&subject=' + encodeURIComponent('Drywall Kingston: Quote Request') +
     '&body=' + encodeURIComponent(
       'Name: ' + name + '\n' +
       'Phone: ' + phone + '\n' +
