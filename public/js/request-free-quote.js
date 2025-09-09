@@ -29,7 +29,7 @@ function sendEmail(event) {
 
   // Construct the mailto link
   let mailtoLink = 'mailto:' + recipientList +
-    '?subject=' + encodeURIComponent('Pavage Gatineau: Quote Request') +
+    '?subject=' + encodeURIComponent('Drywall Kingston: Quote Request') +
     '&body=' + encodeURIComponent(
       'Name: ' + name + '\n' +
       'Phone: ' + phone + '\n' +
