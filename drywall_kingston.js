@@ -16,6 +16,13 @@ const json = require('./miscellaneous/db/json')
 
 const Compression = require('./miscellaneous/services/compression/compression-middleware')
 
+// Middlewares
+const backlink_middleware = require('./lifecycle/middleware/backlink_middleware/mid1.js')
+
+// Controllers
+const get_catch_controller = require('./lifecycle/controller/get-catch-controller/cont1')
+const data_error_handler_controller = require('./lifecycle/controller/error-controller/cont1');
+const backlink_controller = require('./lifecycle/controller/backlink-controller/cont1.js')
 
 
 
@@ -60,13 +67,6 @@ app.use((req, res, next) => {
 
 
 require('./miscellaneous/db/db')
-
-
-// Controllers
-const get_catch_controller = require('./lifecycle/controller/get-catch-controller/cont1')
-const data_error_handler_controller = require('./lifecycle/controller/error-controller/cont1');
-
-
 
 
 
@@ -391,11 +391,10 @@ app.get('/service/:extra_service_page_title_for_seo', async (req, res, next) => 
 
 
 
-
-
-app.get('/backlink/1', (req, res) => {
-  return res.render('backlink1');
-});
+app.get('/backlink/1', 
+  backlink_middleware.mid1,
+  backlink_controller.cont1
+);
 
 
 
