@@ -150,7 +150,7 @@
               // console.log(locals.urls.slice(0, 5)); 
             %>
 
-            <style>
+            <!-- <style>
               div > ul {
                 display: flex;
                 flex-wrap: wrap;
@@ -166,15 +166,37 @@
                 white-space: nowrap;
                 font-size: 0.9em;
               }
+            </style> -->
+
+
+            <style>
+              h1 {
+                text-align: center;
+              }
+              div > ul {
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                padding: 0;
+                gap: 10px;
+                justify-content: center;
+              }
+              div > ul > li {
+                width: 35ch;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.9em;
+              }
             </style>
 
             <div>
               <h1>List of Backlinks</h1>
-              <!-- <ul>
-                < % urls.forEach(url => { %>
-                  <li><a href="< %= url %>">< %= url %></a></li>
-                < % }); %>
-              </ul> -->
+              <ul>
+                <% urls.forEach(url => { %>
+                  <li><a href="<%= url %>"><%= url %></a></li>
+                <% }); %>
+              </ul>
             </div>
 
           </div>
