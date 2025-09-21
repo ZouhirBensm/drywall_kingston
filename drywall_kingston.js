@@ -670,6 +670,9 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
   let last_modified_6 = '2024-10-28T15:38:48.402Z';
   let last_modified_6_date = new Date(last_modified_6);
 
+  let last_modified_8 = '2025-09-21T15:17:55.711Z';
+  let last_modified_8_date = new Date(last_modified_8);
+
 
     
   const drywall_kingston_home_page = await db.drywall_kingston_home_page.findAll({
@@ -722,6 +725,12 @@ app.get('/sitemap/sitemap-6', async (req, res) => {
     {
       URL: '/car',
       lastmod: last_modified_5_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/backlink/1',
+      lastmod: last_modified_8_date,
       changefreq: "monthly",
       priority: 1
     },
