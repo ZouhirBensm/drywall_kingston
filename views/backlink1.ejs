@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+
+  <link rel="canonical" href='/backlink/1'>
+
+  <link rel="stylesheet" href="/css/all.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/templatemo-style.css" />
+  <link rel="stylesheet" href="/css/nav-style.css" />
+  <link rel="stylesheet" href="/css/welcome-section.css" />
+  <link rel="stylesheet" href="/css/footer-style.css" />
+  <link rel="stylesheet" href="/css/request-free-quote.css" />
+
+  <title>List of links for Google crawler 1</title>
+  <meta name="title" content="List of links for Google crawler 1">
+  <meta name="description"
+    content="All the links for webpages that contain themselves links to one of the site I control for SEO crawler purposes">
+
+  <script>
+    console.log('Production:', '<%= locals.production %>');
+    console.log('Env:', '<%= locals.env %>');
+  </script>
+
+  <% if (locals.env===locals.production) { %>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVQMQ78LBR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-PVQMQ78LBR');
+    </script>
+    <% } %>
+
+</head>
+
+<body>
+
+
+  <%- include('common/nav.ejs') %>
+
+
+
+
+  <!-- Welcome Section -->
+  <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="/img/drywall-kingston1.avif"
+    alt="Professional drywall installer in Kingston, Ontario applying joint compound to a wall around a window frame.">
+
+
+    <div class="container-fluid tm-brand-container-outer">
+      <div class="row">
+        <div class="col-12">
+          <!-- style="overflow: hidden;" -->
+          <!-- Logo Area -->
+          <!-- Black transparent bg -->
+          <div class="ml-auto mr-0 tm-bg-blue-transparent text-white tm-brand-container-inner">
+            <div class="tm-brand-container text-center">
+              <h1 class="tm-brand-name">List of links for Google crawler 1</h1>
+              <p class="tm-brand-description">Drywall Kingston 🇨🇦</p>
+              <!-- <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
+                  Book a call
+                </a> -->
+              <a class="animated-text blue mb-0" href="tel:3434771480">
+                +1 (343) 477 1480
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tm-bg-blue-transparent tm-welcome-container">
+      <div class="container-fluid">
+        <div class="row h-100">
+          <!-- Welcome Text -->
+          <!-- White transparent bg -->
+          <div class="col-md-7 tm-welcome-left-col">
+            <div class="tm-welcome-left">
+              <span class="tm-welcome-title">Address</span>
+              <p class="pb-0" itemscope itemtype="https://schema.org/Organization">
+                <a rel="nofollow" href="/organization" itemprop="url">1786 Bath Rd #18
+                  Kingston, ON K7M 4Y2
+                  Canada</a>
+              </p>
+
+
+
+              <div>
+                <!-- <a style="text-decoration: underline;" href="#/extra-link">Extra link</a> -->
+                <a style="text-decoration: underline;" href="/about">About Us</a>
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+
+          <!-- Brown bg -->
+          <div class="col-md-5">
+            <a href="/organization">
+              <div class="tm-welcome-right"
+                aria-label="Map showing the local drywall business location in Kingston, Ontario.">
+                <img src="/img/map1_op.avif" alt="Map showing the local drywall business location in Kingston, Ontario."
+                  style="display:none;">
+                <!-- Map is here -->
+              </div>
+            </a>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Welcome section -->
+
+
+
+
+
+
+  <!-- Portfolio section -->
+  <section id="tmPortfolio">
+    <div class="container-fluid">
+
+
+      <div class="row">
+        <div class="col-12">
+
+          <div>
+            <% 
+              // console.log(locals.canonical)
+              // console.log(locals.meta_description)
+              // console.log(locals.html_title)
+              // console.log(locals.urls.slice(0, 5)); 
+            %>
+
+            <style>
+              div > ul {
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                padding: 0;
+              }
+              
+              div > ul > li {
+                flex: 1 1 calc(50% - 10px);
+                max-width: 45ch;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.9em;
+              }
+            </style>
+
+            <div>
+              <h1>List of Backlinks</h1>
+              <!-- <ul>
+                < % urls.forEach(url => { %>
+                  <li><a href="< %= url %>">< %= url %></a></li>
+                < % }); %>
+              </ul> -->
+            </div>
+
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- End portfolio section -->
+
+
+  <%- include('common/footer.ejs') %>
+
+
+
+
+  <div>
+    <div>
+      <p class="text-center tm-copyright-text">
+        Copyright © 2024
+
+
+        | Powered by: <a target="_blank" href="https://earnanswers.com">Earnanswers</a></p>
+      </footer>
+    </div>
+  </div>
+
+
+
+  <!-- section -->
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/parallax.min.js"></script>
+
+
+
+
+  <script>
+    function detectMsBrowser() {
+      using_ms_browser =
+        navigator.appName == "Microsoft Internet Explorer" ||
+        (navigator.appName == "Netscape" &&
+          navigator.appVersion.indexOf("Edge") > -1) ||
+        (navigator.appName == "Netscape" &&
+          navigator.appVersion.indexOf("Trident") > -1);
+
+      if (using_ms_browser == true) {
+        alert(
+          "Please use Chrome or Firefox for the best browsing experience!"
+        );
+      }
+    }
+    function setBrandMarginTop() {
+      var bottomContainerHeight = $(".tm-welcome-container").height();
+
+      $(".tm-brand-container-outer").css({
+        "margin-top": -bottomContainerHeight + "px"
+      });
+    }
+
+    $(function () {
+      setBrandMarginTop();
+      detectMsBrowser();
+
+      // Handle window resize event
+      $(window).resize(function () {
+        setBrandMarginTop();
+      });
+    });
+  </script>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
