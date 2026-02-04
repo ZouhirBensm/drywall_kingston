@@ -12,7 +12,7 @@
 
   <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
 
-  <link rel="canonical" href='/backlink/1'>
+  <link rel="canonical" href='/backlink/<%- locals.n %>'>
 
   <link rel="stylesheet" href="/css/all.min.css" />
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -22,8 +22,8 @@
   <link rel="stylesheet" href="/css/footer-style.css" />
   <link rel="stylesheet" href="/css/request-free-quote.css" />
 
-  <title>List of links for Google crawler 1</title>
-  <meta name="title" content="List of links for Google crawler 1">
+  <title>List of links for Google crawler <%- locals.n %></title>
+  <meta name="title" content="List of links for Google crawler <%- locals.n %>">
   <meta name="description"
     content="All the links for webpages that contain themselves links to one of the site I control for SEO crawler purposes">
 
@@ -67,7 +67,7 @@
           <!-- Black transparent bg -->
           <div class="ml-auto mr-0 tm-bg-blue-transparent text-white tm-brand-container-inner">
             <div class="tm-brand-container text-center">
-              <h1 class="tm-brand-name">List of links for Google crawler 1</h1>
+              <h1 class="tm-brand-name">List of links for Google crawler <%- locals.n %></h1>
               <p class="tm-brand-description">Drywall Kingston 🇨🇦</p>
               <!-- <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
                   Book a call
@@ -174,25 +174,14 @@
             </div>
 
           </div>
-
-
-
-
-
-
         </div>
       </div>
-
 
     </div>
   </section>
   <!-- End portfolio section -->
 
-
   <%- include('common/footer.ejs') %>
-
-
-
 
   <div>
     <div>
@@ -248,15 +237,6 @@
     });
   </script>
 
-
-
-
-
-
 </body>
-
-
-
-
 
 </html>

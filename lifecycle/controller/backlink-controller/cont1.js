@@ -1,4 +1,9 @@
 async function cont1(req, res, next) {
+
+  if (res.locals.error) {
+    return next()
+  }
+
   try {
     res.render('backlink1');
   } catch (error) {

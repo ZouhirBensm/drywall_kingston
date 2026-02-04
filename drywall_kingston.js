@@ -391,7 +391,7 @@ app.get('/service/:extra_service_page_title_for_seo', async (req, res, next) => 
 
 
 
-app.get('/backlink/1', 
+app.get('/backlink/:n',
   backlink_middleware.mid1,
   backlink_controller.cont1
 );
