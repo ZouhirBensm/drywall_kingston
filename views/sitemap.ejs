@@ -58,212 +58,225 @@
 
 
 
-  <!-- Welcome Section -->
-  <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="/img/drywall-kingston1.avif"
-    alt="Professional drywall installer in Kingston, Ontario applying joint compound to a wall around a window frame.">
+    <!-- Welcome Section -->
+    <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="/img/drywall-kingston1.avif"
+      alt="Professional drywall installer in Kingston, Ontario applying joint compound to a wall around a window frame.">
 
 
-    <div class="container-fluid tm-brand-container-outer">
-      <div class="row">
-        <div class="col-12">
-          <!-- style="overflow: hidden;" -->
-          <!-- Logo Area -->
-          <!-- Black transparent bg -->
-          <div class="ml-auto mr-0 tm-bg-blue-transparent text-white tm-brand-container-inner">
-            <div class="tm-brand-container text-center">
-              <h1 class="tm-brand-name">Sitemap</h1>
-              <p class="tm-brand-description">Drywall Kingston 🇨🇦</p>
-              <!-- <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
+      <div class="container-fluid tm-brand-container-outer">
+        <div class="row">
+          <div class="col-12">
+            <!-- style="overflow: hidden;" -->
+            <!-- Logo Area -->
+            <!-- Black transparent bg -->
+            <div class="ml-auto mr-0 tm-bg-blue-transparent text-white tm-brand-container-inner">
+              <div class="tm-brand-container text-center">
+                <h1 class="tm-brand-name">Sitemap</h1>
+                <p class="tm-brand-description">Drywall Kingston 🇨🇦</p>
+                <!-- <a target="_blank" class="animated-text blue mb-0" href="https://calendly.com/drywallkingston/30min">
                   Book a call
                 </a> -->
-              <a class="animated-text blue mb-0" href="tel:3434771480">
-                +1 (343) 477 1480
+                <a class="animated-text blue mb-0" href="tel:3434771480">
+                  +1 (343) 477 1480
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-bg-blue-transparent tm-welcome-container">
+        <div class="container-fluid">
+          <div class="row h-100">
+            <!-- Welcome Text -->
+            <!-- White transparent bg -->
+            <div class="col-md-7 tm-welcome-left-col">
+              <div class="tm-welcome-left">
+                <span class="tm-welcome-title">Address</span>
+                <p class="pb-0" itemscope itemtype="https://schema.org/Organization">
+                  <a rel="nofollow" href="/organization" itemprop="url">1786 Bath Rd #18
+                    Kingston, ON K7M 4Y2
+                    Canada</a>
+                </p>
+
+
+
+                <div>
+                  <!-- <a style="text-decoration: underline;" href="#/extra-link">Extra link</a> -->
+                  <a style="text-decoration: underline;" href="/about">About Us</a>
+                </div>
+
+
+
+              </div>
+            </div>
+
+
+
+            <!-- Brown bg -->
+            <div class="col-md-5">
+              <a href="/organization">
+                <div class="tm-welcome-right"
+                  aria-label="Map showing the local drywall business location in Kingston, Ontario.">
+                  <img src="/img/map1_op.avif"
+                    alt="Map showing the local drywall business location in Kingston, Ontario." style="display:none;">
+                  <!-- Map is here -->
+                </div>
               </a>
             </div>
+
+
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- End Welcome section -->
 
-    <div class="tm-bg-blue-transparent tm-welcome-container">
+
+
+
+
+    <!-- Portfolio section -->
+    <section id="tmPortfolio">
       <div class="container-fluid">
-        <div class="row h-100">
-          <!-- Welcome Text -->
-          <!-- White transparent bg -->
-          <div class="col-md-7 tm-welcome-left-col">
-            <div class="tm-welcome-left">
-              <span class="tm-welcome-title">Address</span>
-              <p class="pb-0" itemscope itemtype="https://schema.org/Organization">
-                <a rel="nofollow" href="/organization" itemprop="url">1786 Bath Rd #18
-                  Kingston, ON K7M 4Y2
-                  Canada</a>
-              </p>
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <!-- <h2>Sitemap</h2> -->
+              <h2>HTML Sitemap</h2>
+              <ul>
+                <li><a href="/">Drywall Kingston Repair Services Contractor Earnanswers</a></li>
+                <li><a href="/request-free-quote">Request Free Quote</a></li>
+                <li><a href="/organization">Organization</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/tiroir1/legal-disclaimer">Legal Disclaimer</a></li>
+                <li><a href="/tiroir1/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/car">Careers Apply for Drywall Installer/Finisher Position</a></li>
+                <li><a href="/backlink/1">List of links for Google crawler 1</a></li>
+                <li>Service
+                  <ul>
+
+                    <% main_services.forEach((service, index)=> { %>
+                      <li><a href="<%= service.slug %>">
+                          <%= service.home_title %>
+                        </a></li>
+                      <% }); %>
 
 
 
-              <div>
-                <!-- <a style="text-decoration: underline;" href="#/extra-link">Extra link</a> -->
-                <a style="text-decoration: underline;" href="/about">About Us</a>
-              </div>
+                        <% service_pages.forEach(function(page) { %>
+                          <li><a href="/service/<%= page.slug %>">
+                              <%= page.title %>
+                            </a></li>
+                          <% }); %>
+                  </ul>
+                </li>
+
+                <li><a href="/blog">Blog</a>
+
+                  <ul>
+                    <% Object.keys(categories_and_associated_blogs).forEach(function(categoryName) { %>
+                      <li>
+                        <%= categoryName %>
+                          <ul>
+                            <% categories_and_associated_blogs[categoryName].blogs.forEach(function(blog) { %>
+                              <li><a
+                                  href="/blog/<%= categories_and_associated_blogs[categoryName].categorySlug %>/blog-posting/<%= blog.slug %>">
+                                  <%= blog.title %>
+                                </a></li>
+                              <% }); %>
+                          </ul>
+                      </li>
+                      <% }); %>
+                  </ul>
 
 
+
+                </li>
+                <li><a href="/sitemap">Sitemap</a></li>
+              </ul>
+              <h2>XML Sitemap</h2>
+              <ul>
+                <li><a href="/sitemap/sitemap-6" target="_blank">Update Sitemap</a></li>
+                <li><a href="/sitemap/sitemap.xml" target="_blank">XML Sitemap</a></li>
+              </ul>
+
+
+              <h2>Backlinks</h2>
+
+              <ul>
+                <% backlink_pages_urls.forEach(function(backlink_page_url) { %>
+                  <li><a href="<%= backlink_page_url %>">
+                      <%= backlink_page_url %>
+                    </a></li>
+                  <% }); %>
+              </ul>
 
             </div>
           </div>
-
-
-
-          <!-- Brown bg -->
-          <div class="col-md-5">
-            <a href="/organization">
-              <div class="tm-welcome-right"
-                aria-label="Map showing the local drywall business location in Kingston, Ontario.">
-                <img src="/img/map1_op.avif" alt="Map showing the local drywall business location in Kingston, Ontario."
-                  style="display:none;">
-                <!-- Map is here -->
-              </div>
-            </a>
-          </div>
-
-
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Welcome section -->
+    </section>
 
 
 
-
-
-  <!-- Portfolio section -->
-  <section id="tmPortfolio">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div>
-            <h2>Sitemap</h2>
-            <h3>HTML Sitemap</h3>
-            <ul>
-              <li><a href="/">Drywall Kingston Repair Services Contractor Earnanswers</a></li>
-              <li><a href="/request-free-quote">Request Free Quote</a></li>
-              <li><a href="/organization">Organization</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/tiroir1/legal-disclaimer">Legal Disclaimer</a></li>
-              <li><a href="/tiroir1/privacy-policy">Privacy Policy</a></li>
-              <li><a href="/car">Careers Apply for Drywall Installer/Finisher Position</a></li>
-              <li><a href="/backlink/1">List of links for Google crawler 1</a></li>
-              <li>Service
-                <ul>
-
-                  <% main_services.forEach((service, index) => { %>
-                    <li><a href="<%= service.slug %>"><%= service.home_title %></a></li>
-                  <% }); %>
+    <%- include('common/footer.ejs') %>
 
 
 
-                  <% service_pages.forEach(function(page) { %>
-                    <li><a href="/service/<%= page.slug %>">
-                        <%= page.title %>
-                      </a></li>
-                    <% }); %>
-                </ul>
-              </li>
-
-              <li><a href="/blog">Blog</a>
-
-                <ul>
-                  <% Object.keys(categories_and_associated_blogs).forEach(function(categoryName) { %>
-                    <li>
-                      <%= categoryName %>
-                        <ul>
-                          <% categories_and_associated_blogs[categoryName].blogs.forEach(function(blog) { %>
-                            <li><a
-                                href="/blog/<%= categories_and_associated_blogs[categoryName].categorySlug %>/blog-posting/<%= blog.slug %>">
-                                <%= blog.title %>
-                              </a></li>
-                            <% }); %>
-                        </ul>
-                    </li>
-                    <% }); %>
-                </ul>
+      <div>
+        <div>
+          <p class="text-center tm-copyright-text">
+            Copyright © 2024
 
 
-
-              </li>
-              <li><a href="/sitemap">Sitemap</a></li>
-            </ul>
-            <h3>XML Sitemap</h3>
-            <ul>
-              <li><a href="/sitemap/sitemap-6" target="_blank">Update Sitemap</a></li>
-              <li><a href="/sitemap/sitemap.xml" target="_blank">XML Sitemap</a></li>
-            </ul>
-
-          </div>
+            | Powered by: <a target="_blank" href="https://earnanswers.com">Earnanswers</a></p>
+          </footer>
         </div>
       </div>
-    </div>
-  </section>
 
 
 
-  <%- include('common/footer.ejs') %>
-
-
-
-  <div>
-    <div>
-      <p class="text-center tm-copyright-text">
-        Copyright © 2024
-
-
-        | Powered by: <a target="_blank" href="https://earnanswers.com">Earnanswers</a></p>
-      </footer>
-    </div>
-  </div>
-
-
-
-  <!-- section -->
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/parallax.min.js"></script>
+      <!-- section -->
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/parallax.min.js"></script>
 
 
 
 
-  <script>
-    function detectMsBrowser() {
-      using_ms_browser =
-        navigator.appName == "Microsoft Internet Explorer" ||
-        (navigator.appName == "Netscape" &&
-          navigator.appVersion.indexOf("Edge") > -1) ||
-        (navigator.appName == "Netscape" &&
-          navigator.appVersion.indexOf("Trident") > -1);
+      <script>
+        function detectMsBrowser() {
+          using_ms_browser =
+            navigator.appName == "Microsoft Internet Explorer" ||
+            (navigator.appName == "Netscape" &&
+              navigator.appVersion.indexOf("Edge") > -1) ||
+            (navigator.appName == "Netscape" &&
+              navigator.appVersion.indexOf("Trident") > -1);
 
-      if (using_ms_browser == true) {
-        alert(
-          "Please use Chrome or Firefox for the best browsing experience!"
-        );
-      }
-    }
-    function setBrandMarginTop() {
-      var bottomContainerHeight = $(".tm-welcome-container").height();
+          if (using_ms_browser == true) {
+            alert(
+              "Please use Chrome or Firefox for the best browsing experience!"
+            );
+          }
+        }
+        function setBrandMarginTop() {
+          var bottomContainerHeight = $(".tm-welcome-container").height();
 
-      $(".tm-brand-container-outer").css({
-        "margin-top": -bottomContainerHeight + "px"
-      });
-    }
+          $(".tm-brand-container-outer").css({
+            "margin-top": -bottomContainerHeight + "px"
+          });
+        }
 
-    $(function () {
-      setBrandMarginTop();
-      detectMsBrowser();
+        $(function () {
+          setBrandMarginTop();
+          detectMsBrowser();
 
-      // Handle window resize event
-      $(window).resize(function () {
-        setBrandMarginTop();
-      });
-    });
-  </script>
+          // Handle window resize event
+          $(window).resize(function () {
+            setBrandMarginTop();
+          });
+        });
+      </script>
 
 
 

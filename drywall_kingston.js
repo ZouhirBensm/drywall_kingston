@@ -158,7 +158,7 @@ app.get('/', async (req, res) => {
   // return next(error)
 
 
-  
+
   const drywall_kingston_home_page = await db.drywall_kingston_home_page.findAll({
     attributes: ['id', 'home_page_updated_date', 'home_page_published_date'],
     raw: true
@@ -193,12 +193,12 @@ app.get('/', async (req, res) => {
     // where: {
     //   category_id: db_category.id,
     // },
-  include: [
-    {
-      model: db.category,
-      as: 'category',
-      attributes: ['category_name', 'slug']
-    }],
+    include: [
+      {
+        model: db.category,
+        as: 'category',
+        attributes: ['category_name', 'slug']
+      }],
     attributes: ['slug', 'title'],
     nest: true,
     raw: true,
@@ -426,12 +426,12 @@ app.get('/sitemap', async (req, res) => {
     // where: {
     //   category_id: db_category.id,
     // },
-  include: [
-    {
-      model: db.category,
-      as: 'category',
-      attributes: ['category_name', 'slug']
-    }],
+    include: [
+      {
+        model: db.category,
+        as: 'category',
+        attributes: ['category_name', 'slug']
+      }],
     attributes: ['slug', 'title'],
     nest: true,
     raw: true,
@@ -476,12 +476,36 @@ app.get('/sitemap', async (req, res) => {
 
 
 
+  let backlink_pages_urls = []
+  const backlinksDir = path.join(__dirname, './backlinks');
+
+  const files = fs.readdirSync(backlinksDir);
+
+  for (const file of files) {
+    const match = file.match(/^backlink(\d+)\.txt$/i);
+    if (!match) continue;
+
+    const number = match[1];
+
+    backlink_pages_urls.push(`/backlink/${number}`);
+  }
+
+  // res.locals.backlink_pages_urls = backlink_pages_urls
+
+  // console.log({
+  //   // blog_elements: blog_elements,
+  //   service_pages: service_pages,
+  //   categories_and_associated_blogs: categories_and_associated_blogs,
+  //   main_services: main_services,
+  //   backlink_pages_urls: backlink_pages_urls
+  // })
 
   return res.render('sitemap', {
     // blog_elements: blog_elements,
     service_pages: service_pages,
     categories_and_associated_blogs: categories_and_associated_blogs,
-    main_services: main_services
+    main_services: main_services,
+    backlink_pages_urls: backlink_pages_urls
   });
   // return res.sendFile('sitemap.html', { root: 'public' });
 });
@@ -503,9 +527,9 @@ app.get('/blog', async (req, res) => {
   const categories = await db.category.findAll({
     raw: true
   }
-);
+  );
 
-console.log(categories)
+  console.log(categories)
 
 
 
@@ -604,7 +628,7 @@ app.get('/blog/:category/blog-posting/:title', async (req, res, next) => {
     nest: true,
   });
 
-  
+
   // console.log('\n\n(1)-> ', blog_element, '\n\n')
 
 
