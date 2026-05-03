@@ -117,7 +117,7 @@ a:hover {
 }
 
 .tm-brand-container {
-  padding: 75px 110px;
+  padding: 40px 90px;
   letter-spacing: 1.2px;
   background-image: url('../img/svg/wave_footer.svg');
   background-repeat: no-repeat;
@@ -389,6 +389,13 @@ p {
     padding: 20px 30px;
   }
 }
+
+@media (max-width: 800px) {
+  .tm-brand-container {
+    padding: 20px 45px;
+  }
+}
+
 
 @media (max-width: 572px) {
   .tm-brand-container {
