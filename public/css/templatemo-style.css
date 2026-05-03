@@ -198,7 +198,7 @@ h1.tm-brand-name.long-title {
 #tmPortfolio {
   padding-top: 80px;
   /* Here@ */
-  background: white; 
+  background: white;
 
 }
 
@@ -270,7 +270,7 @@ p {
   padding: 54px 34px 44px;
 }
 
-.tm-contact-item > p:nth-of-type(2) {
+.tm-contact-item>p:nth-of-type(2) {
   letter-spacing: 2px;
 }
 
