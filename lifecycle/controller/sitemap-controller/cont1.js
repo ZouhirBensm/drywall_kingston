@@ -18,7 +18,87 @@ async function cont1(req, res, next) {
 
   const PROJECT_ROOT = path.join(__dirname, '../../../');
   const xmlFilePath = path.join(PROJECT_ROOT, 'public', 'sitemap', 'sitemap.xml');
-  const backlinksDir = path.join(__dirname, '../../../backlinks');
+
+
+  
+  let urls = [
+    {
+      URL: '/',
+      lastmod: last_modified_7_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/request-free-quote',
+      lastmod: last_modified_1_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/organization',
+      lastmod: last_modified_1_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/about',
+      lastmod: last_modified_1_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/car',
+      lastmod: last_modified_5_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/sitemap',
+      lastmod: last_modified_5_date,
+      changefreq: "yearly",
+      priority: 0.5
+    },
+  ];
+
+  const backlinksBasePath = process.env['PATH_TO_BACKLINKS'];
+  // const backlinksBasePath = false;
+
+  console.log("\n\nprocess.env['PATH_TO_BACKLINKS']\n\n", process.env['PATH_TO_BACKLINKS'], "\n\n")
+
+  if (!backlinksBasePath) {
+    const errormessage = "Backlinks path configuration missing. PATH_TO_BACKLINKS environment variable is not set"
+    let error = new Error(errormessage)
+    return next(error);
+
+
+    // res.locals.error = error
+    // return next();
+
+  } else {
+    const backlink_pages_edited_date = '2026-02-13T18:27:54.977Z'
+    const lastmod = new Date(backlink_pages_edited_date);
+
+    try {
+      const files = fs.readdirSync(backlinksBasePath);
+
+      for (const file of files) {
+        const match = file.match(/^backlink(\d+)\.txt$/i);
+        if (!match) continue;
+
+        const number = match[1];
+
+        urls.push({
+          URL: `/backlink/${number}`,
+          lastmod: lastmod,
+          changefreq: "monthly",
+          priority: 0.8
+        });
+      }
+    } catch (error) {
+      console.error('Error reading backlinks directory:', error);
+      // Continue without backlinks if directory doesn't exist
+    }
+  }
 
   // const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 
@@ -64,48 +144,6 @@ async function cont1(req, res, next) {
   console.log("\n\ndrywall_kingston_home_page.home_page_updated_date\n\n", drywall_kingston_home_page[0].home_page_updated_date)
 
   let last_modified_7_date = new Date(drywall_kingston_home_page[0].home_page_updated_date);
-
-
-  const urls = [
-    {
-      URL: '/',
-      lastmod: last_modified_7_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/request-free-quote',
-      lastmod: last_modified_1_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/organization',
-      lastmod: last_modified_1_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/about',
-      lastmod: last_modified_1_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/car',
-      lastmod: last_modified_5_date,
-      changefreq: "monthly",
-      priority: 1
-    },
-    {
-      URL: '/sitemap',
-      lastmod: last_modified_5_date,
-      changefreq: "yearly",
-      priority: 0.5
-    },
-  ];
-
-
 
 
 
@@ -222,28 +260,7 @@ async function cont1(req, res, next) {
 
   // return res.end()
 
-
-  const backlink_pages_edited_date = '2026-02-13T18:27:54.977Z'
-  const lastmod = new Date(backlink_pages_edited_date);
-
-  const files = fs.readdirSync(backlinksDir);
-
-  for (const file of files) {
-    const match = file.match(/^backlink(\d+)\.txt$/i);
-    if (!match) continue;
-
-    const number = match[1];
-
-    urls.push({
-      URL: `/backlink/${number}`,
-      lastmod: lastmod,
-      changefreq: "monthly",
-      priority: 0.8
-    });
-  }
-
-
-  console.log(JSON.stringify(urls, null, 2));
+  // console.log(JSON.stringify(urls, null, 2));
 
   const xml = createSiteMap(urls);
 

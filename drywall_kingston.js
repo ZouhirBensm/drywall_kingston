@@ -22,7 +22,6 @@ const backlink_middleware = require('./lifecycle/middleware/backlink_middleware/
 // Controllers
 const get_catch_controller = require('./lifecycle/controller/get-catch-controller/cont1')
 const data_error_handler_controller = require('./lifecycle/controller/error-controller/cont1');
-const backlink_controller = require('./lifecycle/controller/backlink-controller/cont1.js')
 const sitemap_controller = require('./lifecycle/controller/sitemap-controller/cont1.js')
 
 
@@ -475,30 +474,37 @@ app.get('/sitemap', async (req, res) => {
   }
 
 
-
   let backlink_pages_urls = []
-  const backlinksDir = path.join(__dirname, './backlinks');
 
-  const files = fs.readdirSync(backlinksDir);
+  // Get the base path from environment variable
+  const backlinksBasePath = process.env['PATH_TO_BACKLINKS'];
+  // const backlinksBasePath = false
 
-  for (const file of files) {
-    const match = file.match(/^backlink(\d+)\.txt$/i);
-    if (!match) continue;
-
-    const number = match[1];
-
-    backlink_pages_urls.push(`/backlink/${number}`);
+  if (!backlinksBasePath) {
+    const errormessage = "Backlinks path configuration missing. PATH_TO_BACKLINKS environment variable is not set"
+    let error = new Error(errormessage)
+    res.locals.error = error
+    return next();
   }
 
-  // res.locals.backlink_pages_urls = backlink_pages_urls
+  try {
+    // Read files from the configured backlinks directory
+    const files = fs.readdirSync(backlinksBasePath);
 
-  // console.log({
-  //   // blog_elements: blog_elements,
-  //   service_pages: service_pages,
-  //   categories_and_associated_blogs: categories_and_associated_blogs,
-  //   main_services: main_services,
-  //   backlink_pages_urls: backlink_pages_urls
-  // })
+    for (const file of files) {
+      const match = file.match(/^backlink(\d+)\.txt$/i);
+      if (!match) continue;
+
+      const number = match[1];
+      backlink_pages_urls.push(`/backlink/${number}`);
+    }
+
+  } catch (error) {
+    console.error('Error reading backlinks directory:', error);
+    // Continue with empty backlinks list if directory doesn't exist
+    backlink_pages_urls = [];
+  }
+
 
   return res.render('sitemap', {
     // blog_elements: blog_elements,
