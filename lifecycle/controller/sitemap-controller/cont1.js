@@ -20,7 +20,43 @@ async function cont1(req, res, next) {
   const xmlFilePath = path.join(PROJECT_ROOT, 'public', 'sitemap', 'sitemap.xml');
 
 
+
+  const drywall_kingston_home_page = await db.drywall_kingston_home_page.findAll({
+    attributes: ['id', 'home_page_updated_date', 'home_page_published_date'],
+    raw: true
+  });
+
+  if (!drywall_kingston_home_page) {
+    const error = new Error("No drywall_kingston_home_page found!")
+    return next(error)
+  }
+
+
+  console.log("\n\ndrywall_kingston_home_page.home_page_updated_date\n\n", drywall_kingston_home_page[0].home_page_updated_date)
+
+
+  let last_modified_1 = '2024-06-02T15:07:49.699Z';
+  let last_modified_1_date = new Date(last_modified_1);
+
+  let last_modified_3 = '2024-06-21T15:04:37.758Z';
+  let last_modified_3_date = new Date(last_modified_3);
+
+  let last_modified_4 = '2024-06-24T13:13:22.821Z';
+  let last_modified_4_date = new Date(last_modified_4);
+
+  let last_modified_5 = '2024-10-07T18:42:50.563Z';
+  let last_modified_5_date = new Date(last_modified_4);
+
+  let last_modified_6 = '2024-10-28T15:38:48.402Z';
+  let last_modified_6_date = new Date(last_modified_6);
+
+  let last_modified_7_date = new Date(drywall_kingston_home_page[0].home_page_updated_date);
+
+  let last_modified_8 = '2025-09-21T15:17:55.711Z';
+  let last_modified_8_date = new Date(last_modified_8);
+
   
+
   let urls = [
     {
       URL: '/',
@@ -112,38 +148,11 @@ async function cont1(req, res, next) {
   const now = new Date();
   console.log('Now -> ', now);
 
-  let last_modified_1 = '2024-06-02T15:07:49.699Z';
-  let last_modified_1_date = new Date(last_modified_1);
-
-  let last_modified_3 = '2024-06-21T15:04:37.758Z';
-  let last_modified_3_date = new Date(last_modified_3);
-
-  let last_modified_4 = '2024-06-24T13:13:22.821Z';
-  let last_modified_4_date = new Date(last_modified_4);
-
-  let last_modified_5 = '2024-10-07T18:42:50.563Z';
-  let last_modified_5_date = new Date(last_modified_4);
-
-  let last_modified_6 = '2024-10-28T15:38:48.402Z';
-  let last_modified_6_date = new Date(last_modified_6);
-
-  let last_modified_8 = '2025-09-21T15:17:55.711Z';
-  let last_modified_8_date = new Date(last_modified_8);
-
-  const drywall_kingston_home_page = await db.drywall_kingston_home_page.findAll({
-    attributes: ['id', 'home_page_updated_date', 'home_page_published_date'],
-    raw: true
-  });
-
-  if (!drywall_kingston_home_page) {
-    const error = new Error("No drywall_kingston_home_page found!")
-    return next(error)
-  }
 
 
-  console.log("\n\ndrywall_kingston_home_page.home_page_updated_date\n\n", drywall_kingston_home_page[0].home_page_updated_date)
 
-  let last_modified_7_date = new Date(drywall_kingston_home_page[0].home_page_updated_date);
+
+
 
 
 
