@@ -32,7 +32,7 @@ async function cont1(req, res, next) {
   }
 
 
-  console.log("\n\ndrywall_kingston_home_page.home_page_updated_date\n\n", drywall_kingston_home_page[0].home_page_updated_date)
+  // console.log("\n\ndrywall_kingston_home_page.home_page_updated_date\n\n", drywall_kingston_home_page[0].home_page_updated_date)
 
 
   let last_modified_1 = '2024-06-02T15:07:49.699Z';
@@ -55,7 +55,7 @@ async function cont1(req, res, next) {
   let last_modified_8 = '2025-09-21T15:17:55.711Z';
   let last_modified_8_date = new Date(last_modified_8);
 
-  
+
 
   let urls = [
     {
