@@ -4,6 +4,12 @@ const fs = require('fs');
 const createSiteMap = require('../../../miscellaneous/utils/custom-sitemap')
 
 async function cont1(req, res, next) {
+
+
+  const now = new Date();
+  console.log('Now -> ', now);
+
+  
   // Set cache-control headers to prevent caching
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
@@ -39,8 +45,6 @@ async function cont1(req, res, next) {
 
   // console.log("\n\ndrywall_kingston_home_page.home_page_updated_date\n\n", drywall_kingston_home_page[0].home_page_updated_date)
 
-  const now = new Date();
-  console.log('Now -> ', now);
 
   let last_modified_1 = '2024-06-02T15:07:49.699Z';
   let last_modified_1_date = new Date(last_modified_1);
