@@ -503,7 +503,7 @@ app.get('/sitemap', async (req, res) => {
   } catch (error) {
     console.error('Error reading backlinks directory:', error);
     // Continue with empty backlinks list if directory doesn't exist
-    res.locals.backlink_pages_urls = [];
+    backlink_pages_urls = [];
   }
 
 
