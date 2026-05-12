@@ -22,6 +22,7 @@ const backlink_middleware = require('./lifecycle/middleware/backlink_middleware/
 // Controllers
 const get_catch_controller = require('./lifecycle/controller/get-catch-controller/cont1')
 const data_error_handler_controller = require('./lifecycle/controller/error-controller/cont1');
+const backlink_controller = require('./lifecycle/controller/backlink-controller/cont1.js')
 const sitemap_controller = require('./lifecycle/controller/sitemap-controller/cont1.js')
 
 
@@ -502,7 +503,7 @@ app.get('/sitemap', async (req, res) => {
   } catch (error) {
     console.error('Error reading backlinks directory:', error);
     // Continue with empty backlinks list if directory doesn't exist
-    backlink_pages_urls = [];
+    res.locals.backlink_pages_urls = [];
   }
 
 
