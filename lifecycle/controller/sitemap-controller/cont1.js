@@ -19,6 +19,11 @@ async function cont1(req, res, next) {
   const PROJECT_ROOT = path.join(__dirname, '../../../');
   const xmlFilePath = path.join(PROJECT_ROOT, 'public', 'sitemap', 'sitemap.xml');
 
+  // Delete the existing XML file if it exists
+  if (fs.existsSync(xmlFilePath)) {
+    fs.unlinkSync(xmlFilePath);
+    console.log('Deleted existing sitemap.xml file');
+  }
 
 
   const drywall_kingston_home_page = await db.drywall_kingston_home_page.findAll({
@@ -96,6 +101,7 @@ async function cont1(req, res, next) {
     },
   ];
 
+
   const backlinksBasePath = process.env['PATH_TO_BACKLINKS'];
   // const backlinksBasePath = false;
 
@@ -136,13 +142,6 @@ async function cont1(req, res, next) {
     }
   }
 
-  // const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
-
-  // Delete the existing XML file if it exists
-  if (fs.existsSync(xmlFilePath)) {
-    fs.unlinkSync(xmlFilePath);
-    console.log('Deleted existing sitemap.xml file');
-  }
 
 
   const now = new Date();
